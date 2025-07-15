@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/iffco_white"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal">
+
+        <!-- Crop Name -->
+        <TextView
+            android:id="@+id/detailCropName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crop"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/iffco_green"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center" />
+
+        <!-- NPK -->
+        <TextView
+            android:id="@+id/npkValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NPK: "
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:textColor="@color/iffco_dark_gray"
+            android:background="@color/iffco_gray"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Products -->
+        <TextView
+            android:id="@+id/productList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Products: "
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:textColor="@color/iffco_dark_gray"
+            android:background="@color/iffco_gray"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Advice -->
+        <TextView
+            android:id="@+id/adviceText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Advice: "
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:textColor="@color/iffco_dark_gray"
+            android:background="@color/iffco_gray"
+            android:layout_marginBottom="20dp" />
+
+    </LinearLayout>
+</ScrollView>

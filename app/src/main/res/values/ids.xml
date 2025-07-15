@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="sowing" type="id" />
+    <item name="harvesting" type="id" />
+    <item name="advice" type="id" />
+</resources>

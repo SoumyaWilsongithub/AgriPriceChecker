@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1033173413755",
+    "firebase_url": "https://agripricechecker-default-rtdb.firebaseio.com",
+    "project_id": "agripricechecker",
+    "storage_bucket": "agripricechecker.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033173413755:android:343a3121ac69cfcd8a97de",
+        "android_client_info": {
+          "package_name": "com.example.agripricechecker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWx6IHAjNBj4gDYRKOLGVVfJ0fJ3DChAw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

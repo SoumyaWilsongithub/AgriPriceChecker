@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/iffco_white"
+    android:gravity="top">
+
+    <!-- App Icon -->
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/farmer"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter" />
+
+    <!-- Welcome Text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="Welcome"
+        android:textColor="@color/iffco_dark_gray"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Space between header and buttons -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="32dp" />
+
+    <!-- First Row: Fetch Price & Price Trend -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="50dp">
+
+        <!-- Fetch Price -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btnFetchPrice"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/fetch_price"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fetch Price"
+                android:textColor="@color/iffco_green_light"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- Price Trend -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btnChart"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/price_trend"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price Trend"
+                android:textColor="@color/iffco_blue"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Space between rows -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <!-- Second Row: Farmer Tip & Weather Forecast -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="50dp">
+
+        <!-- Farmer Tip -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btnTip"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/cropcalendar"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crop Calendar"
+                android:textSize="14sp"
+                android:textColor="@color/iffco_blue"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- Weather Forecast -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btnNews"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/npk"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fertilizer Recommendation"
+                android:textColor="@color/iffco_green_light"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

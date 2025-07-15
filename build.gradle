@@ -1,0 +1,15 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// Located at H:\Android Studio Projects\AgriPriceChecker_Runnable\build.gradle
+
+plugins {
+    id 'com.android.application' version '8.11.0' apply false
+    id 'com.google.gms.google-services' version '4.4.3' apply false
+    // id 'com.android.library' version '8.11.0' apply false // If you have library modules
+    // id 'org.jetbrains.kotlin.android' version 'your_kotlin_version' apply false // If using Kotlin
+}
+
+// DO NOT PUT dependencyResolutionManagement { ... } HERE
+// DO NOT PUT buildscript { ... } here for repositories if you defined them in pluginManagement in settings.gradle
+
+// You can have an allprojects { ... } block or subprojects { ... } block for other common configurations if needed,
+// but repository definitions for dependencies are now centralized in settings.gradle

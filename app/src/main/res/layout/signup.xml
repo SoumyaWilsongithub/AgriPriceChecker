@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/iffco_white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top Green Section -->
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/iffco_green"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/farmer"
+            android:scaleType="fitCenter"
+            android:contentDescription="App Logo" />
+
+        <TextView
+            android:layout_marginTop="12dp"
+            android:text="Create an Account"
+            android:textColor="@color/iffco_white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!-- Bottom White Section -->
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center"
+        android:background="@color/iffco_white"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <!-- Full Name -->
+        <EditText
+            android:id="@+id/signupName"
+            android:hint="Full Name"
+            android:drawableStart="@android:drawable/ic_menu_edit"
+            android:backgroundTint="@color/iffco_green"
+            android:textColor="@color/black"
+            android:layout_marginBottom="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Email -->
+        <EditText
+            android:id="@+id/signupEmail"
+            android:hint="Email"
+            android:drawableStart="@android:drawable/ic_dialog_email"
+            android:backgroundTint="@color/iffco_green"
+            android:textColor="@color/black"
+            android:layout_marginBottom="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Password -->
+        <EditText
+            android:id="@+id/signupPassword"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:drawableStart="@android:drawable/ic_lock_idle_lock"
+            android:backgroundTint="@color/iffco_green"
+            android:textColor="@color/black"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Signup Button -->
+        <Button
+            android:id="@+id/signupBtn"
+            android:text="Sign Up"
+            android:textColor="@color/iffco_white"
+            android:backgroundTint="@color/iffco_blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Already have an account? -->
+        <TextView
+            android:id="@+id/gotoLogin"
+            android:layout_marginTop="16dp"
+            android:text="Already have an account? Login"
+            android:textColor="@color/iffco_blue"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

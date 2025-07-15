@@ -1,0 +1,352 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.agripricechecker"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+9        android:targetSdkVersion="34" />
+10
+11    <!-- Required permissions -->
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:6:5-67
+12-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:6:22-64
+13    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+13-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:7:5-79
+13-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:7:22-76
+14    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+14-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:8:5-81
+14-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:8:22-78
+15
+16    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+17    <!-- <uses-sdk android:minSdkVersion="21"/> -->
+18    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+18-->[com.google.firebase:firebase-database:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\731d1e61bddb0da8d292e260a536427b\transformed\jetified-firebase-database-21.0.0\AndroidManifest.xml:22:5-79
+18-->[com.google.firebase:firebase-database:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\731d1e61bddb0da8d292e260a536427b\transformed\jetified-firebase-database-21.0.0\AndroidManifest.xml:22:22-76
+19    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+19-->[com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\e74e1696b861d179746033113d19fb21\transformed\jetified-recaptcha-18.6.1\AndroidManifest.xml:9:5-98
+19-->[com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\e74e1696b861d179746033113d19fb21\transformed\jetified-recaptcha-18.6.1\AndroidManifest.xml:9:22-95
+20
+21    <permission
+21-->[androidx.core:core:1.9.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\0f2e8b18d7c253ca3404999ba1db0f81\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+22        android:name="com.example.agripricechecker.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+22-->[androidx.core:core:1.9.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\0f2e8b18d7c253ca3404999ba1db0f81\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+23        android:protectionLevel="signature" />
+23-->[androidx.core:core:1.9.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\0f2e8b18d7c253ca3404999ba1db0f81\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+24
+25    <uses-permission android:name="com.example.agripricechecker.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+25-->[androidx.core:core:1.9.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\0f2e8b18d7c253ca3404999ba1db0f81\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+25-->[androidx.core:core:1.9.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\0f2e8b18d7c253ca3404999ba1db0f81\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+26
+27    <application
+27-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:10:5-41:19
+28        android:allowBackup="true"
+28-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:11:9-35
+29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+29-->[androidx.core:core:1.9.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\0f2e8b18d7c253ca3404999ba1db0f81\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+30        android:debuggable="true"
+31        android:extractNativeLibs="false"
+32        android:icon="@mipmap/app"
+32-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:13:9-35
+33        android:label="Agri Price Checker"
+33-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:12:9-43
+34        android:roundIcon="@mipmap/app"
+34-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:14:9-40
+35        android:theme="@style/Theme.AgriPriceChecker"
+35-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:15:9-54
+36        android:usesCleartextTraffic="true" >
+36-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:16:9-44
+37
+38        <!-- ✅ Splash Screen is the new launcher -->
+39        <activity
+39-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:19:9-27:20
+40            android:name="com.example.agripricechecker.SplashActivity"
+40-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:20:13-43
+41            android:exported="true"
+41-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:21:13-36
+42            android:theme="@style/Theme.AgriPriceChecker" >
+42-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:22:13-58
+43            <intent-filter>
+43-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:23:13-26:29
+44                <action android:name="android.intent.action.MAIN" />
+44-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:24:17-68
+44-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:24:25-66
+45
+46                <category android:name="android.intent.category.LAUNCHER" />
+46-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:25:17-76
+46-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:25:27-74
+47            </intent-filter>
+48        </activity>
+49
+50        <!-- Other activities -->
+51        <activity
+51-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:30:9-76
+52            android:name="com.example.agripricechecker.LoginActivity"
+52-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:30:19-48
+53            android:exported="false" />
+53-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:30:49-73
+54        <activity
+54-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:31:9-77
+55            android:name="com.example.agripricechecker.SignupActivity"
+55-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:31:19-49
+56            android:exported="false" />
+56-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:31:50-74
+57        <activity
+57-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:32:9-75
+58            android:name="com.example.agripricechecker.MainActivity"
+58-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:32:19-47
+59            android:exported="false" />
+59-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:32:48-72
+60        <activity android:name="com.example.agripricechecker.FetchPriceActivity" />
+60-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:33:9-56
+60-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:33:19-53
+61        <activity android:name="com.example.agripricechecker.ChartCropSelectionActivity" />
+61-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:34:9-64
+61-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:34:19-61
+62        <activity android:name="com.example.agripricechecker.ChartActivity" />
+62-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:35:9-51
+62-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:35:19-48
+63        <activity android:name="com.example.agripricechecker.CropCalendarActivity" />
+63-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:36:9-58
+63-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:36:19-55
+64        <activity android:name="com.example.agripricechecker.CropDetailActivity" />
+64-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:37:9-56
+64-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:37:19-53
+65        <activity android:name="com.example.agripricechecker.FertilizerActivity" />
+65-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:38:9-56
+65-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:38:19-53
+66        <activity android:name="com.example.agripricechecker.FertilizerDetailActivity" />
+66-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:39:9-62
+66-->H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:39:19-59
+67
+68        <service
+68-->[com.google.firebase:firebase-database:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\731d1e61bddb0da8d292e260a536427b\transformed\jetified-firebase-database-21.0.0\AndroidManifest.xml:26:9-35:19
+69            android:name="com.google.firebase.components.ComponentDiscoveryService"
+69-->[com.google.firebase:firebase-database:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\731d1e61bddb0da8d292e260a536427b\transformed\jetified-firebase-database-21.0.0\AndroidManifest.xml:27:13-84
+70            android:directBootAware="true"
+70-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\6b6906f407e0eaed4bb50af2f8f3ed57\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:32:13-43
+71            android:exported="false" >
+71-->[com.google.firebase:firebase-database:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\731d1e61bddb0da8d292e260a536427b\transformed\jetified-firebase-database-21.0.0\AndroidManifest.xml:28:13-37
+72            <meta-data
+72-->[com.google.firebase:firebase-database:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\731d1e61bddb0da8d292e260a536427b\transformed\jetified-firebase-database-21.0.0\AndroidManifest.xml:29:13-31:85
+73                android:name="com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar"
+73-->[com.google.firebase:firebase-database:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\731d1e61bddb0da8d292e260a536427b\transformed\jetified-firebase-database-21.0.0\AndroidManifest.xml:30:17-120
+74                android:value="com.google.firebase.components.ComponentRegistrar" />
+74-->[com.google.firebase:firebase-database:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\731d1e61bddb0da8d292e260a536427b\transformed\jetified-firebase-database-21.0.0\AndroidManifest.xml:31:17-82
+75            <meta-data
+75-->[com.google.firebase:firebase-database:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\731d1e61bddb0da8d292e260a536427b\transformed\jetified-firebase-database-21.0.0\AndroidManifest.xml:32:13-34:85
+76                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+76-->[com.google.firebase:firebase-database:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\731d1e61bddb0da8d292e260a536427b\transformed\jetified-firebase-database-21.0.0\AndroidManifest.xml:33:17-109
+77                android:value="com.google.firebase.components.ComponentRegistrar" />
+77-->[com.google.firebase:firebase-database:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\731d1e61bddb0da8d292e260a536427b\transformed\jetified-firebase-database-21.0.0\AndroidManifest.xml:34:17-82
+78            <meta-data
+78-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:69:13-71:85
+79                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+79-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:70:17-109
+80                android:value="com.google.firebase.components.ComponentRegistrar" />
+80-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:71:17-82
+81            <meta-data
+81-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\3269b54e78af9fed27cf33a7c607be5f\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:12:13-14:85
+82                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+82-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\3269b54e78af9fed27cf33a7c607be5f\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:13:17-116
+83                android:value="com.google.firebase.components.ComponentRegistrar" />
+83-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\3269b54e78af9fed27cf33a7c607be5f\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:14:17-82
+84            <meta-data
+84-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\6b6906f407e0eaed4bb50af2f8f3ed57\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:35:13-37:85
+85                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+85-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\6b6906f407e0eaed4bb50af2f8f3ed57\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:36:17-109
+86                android:value="com.google.firebase.components.ComponentRegistrar" />
+86-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\6b6906f407e0eaed4bb50af2f8f3ed57\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:37:17-82
+87        </service>
+88
+89        <activity
+89-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:29:9-46:20
+90            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+90-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:30:13-80
+91            android:excludeFromRecents="true"
+91-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:31:13-46
+92            android:exported="true"
+92-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:32:13-36
+93            android:launchMode="singleTask"
+93-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:33:13-44
+94            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+94-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:34:13-72
+95            <intent-filter>
+95-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:35:13-45:29
+96                <action android:name="android.intent.action.VIEW" />
+96-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:36:17-69
+96-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:36:25-66
+97
+98                <category android:name="android.intent.category.DEFAULT" />
+98-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:38:17-76
+98-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:38:27-73
+99                <category android:name="android.intent.category.BROWSABLE" />
+99-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:39:17-78
+99-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:39:27-75
+100
+101                <data
+101-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:41:17-44:51
+102                    android:host="firebase.auth"
+102-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:42:21-49
+103                    android:path="/"
+103-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:43:21-37
+104                    android:scheme="genericidp" />
+104-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:44:21-48
+105            </intent-filter>
+106        </activity>
+107        <activity
+107-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:47:9-64:20
+108            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+108-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:48:13-79
+109            android:excludeFromRecents="true"
+109-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:49:13-46
+110            android:exported="true"
+110-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:50:13-36
+111            android:launchMode="singleTask"
+111-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:51:13-44
+112            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+112-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:52:13-72
+113            <intent-filter>
+113-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:53:13-63:29
+114                <action android:name="android.intent.action.VIEW" />
+114-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:36:17-69
+114-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:36:25-66
+115
+116                <category android:name="android.intent.category.DEFAULT" />
+116-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:38:17-76
+116-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:38:27-73
+117                <category android:name="android.intent.category.BROWSABLE" />
+117-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:39:17-78
+117-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:39:27-75
+118
+119                <data
+119-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:41:17-44:51
+120                    android:host="firebase.auth"
+120-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:42:21-49
+121                    android:path="/"
+121-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:43:21-37
+122                    android:scheme="recaptcha" />
+122-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:44:21-48
+123            </intent-filter>
+124        </activity>
+125
+126        <service
+126-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\6c57f728458f5bb6fbd38fe3dd712a80\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:24:9-32:19
+127            android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder"
+127-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\6c57f728458f5bb6fbd38fe3dd712a80\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:25:13-94
+128            android:enabled="true"
+128-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\6c57f728458f5bb6fbd38fe3dd712a80\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:26:13-35
+129            android:exported="false" >
+129-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\6c57f728458f5bb6fbd38fe3dd712a80\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:27:13-37
+130            <meta-data
+130-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\6c57f728458f5bb6fbd38fe3dd712a80\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:29:13-31:104
+131                android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY"
+131-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\6c57f728458f5bb6fbd38fe3dd712a80\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:30:17-76
+132                android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl" />
+132-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\6c57f728458f5bb6fbd38fe3dd712a80\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:31:17-101
+133        </service>
+134
+135        <activity
+135-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\6c57f728458f5bb6fbd38fe3dd712a80\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:34:9-41:20
+136            android:name="androidx.credentials.playservices.HiddenActivity"
+136-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\6c57f728458f5bb6fbd38fe3dd712a80\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:35:13-76
+137            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+137-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\6c57f728458f5bb6fbd38fe3dd712a80\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:36:13-87
+138            android:enabled="true"
+138-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\6c57f728458f5bb6fbd38fe3dd712a80\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:37:13-35
+139            android:exported="false"
+139-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\6c57f728458f5bb6fbd38fe3dd712a80\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:38:13-37
+140            android:fitsSystemWindows="true"
+140-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\6c57f728458f5bb6fbd38fe3dd712a80\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:39:13-45
+141            android:theme="@style/Theme.Hidden" >
+141-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\6c57f728458f5bb6fbd38fe3dd712a80\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:40:13-48
+142        </activity>
+143        <activity
+143-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\e8d696188ed3412328e0d165a6b3e494\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:23:9-27:75
+144            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+144-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\e8d696188ed3412328e0d165a6b3e494\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:24:13-93
+145            android:excludeFromRecents="true"
+145-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\e8d696188ed3412328e0d165a6b3e494\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:25:13-46
+146            android:exported="false"
+146-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\e8d696188ed3412328e0d165a6b3e494\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:26:13-37
+147            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+147-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\e8d696188ed3412328e0d165a6b3e494\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:27:13-72
+148        <!--
+149            Service handling Google Sign-In user revocation. For apps that do not integrate with
+150            Google Sign-In, this service will never be started.
+151        -->
+152        <service
+152-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\e8d696188ed3412328e0d165a6b3e494\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:33:9-37:51
+153            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+153-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\e8d696188ed3412328e0d165a6b3e494\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:34:13-89
+154            android:exported="true"
+154-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\e8d696188ed3412328e0d165a6b3e494\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:35:13-36
+155            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+155-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\e8d696188ed3412328e0d165a6b3e494\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:36:13-107
+156            android:visibleToInstantApps="true" />
+156-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\e8d696188ed3412328e0d165a6b3e494\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:37:13-48
+157
+158        <activity
+158-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\ced6c8e50e3edb64bed364f629f46eaa\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+159            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+159-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\ced6c8e50e3edb64bed364f629f46eaa\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+160            android:exported="false"
+160-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\ced6c8e50e3edb64bed364f629f46eaa\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+161            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+161-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\ced6c8e50e3edb64bed364f629f46eaa\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+162
+163        <provider
+163-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\6b6906f407e0eaed4bb50af2f8f3ed57\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:23:9-28:39
+164            android:name="com.google.firebase.provider.FirebaseInitProvider"
+164-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\6b6906f407e0eaed4bb50af2f8f3ed57\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:24:13-77
+165            android:authorities="com.example.agripricechecker.firebaseinitprovider"
+165-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\6b6906f407e0eaed4bb50af2f8f3ed57\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:25:13-72
+166            android:directBootAware="true"
+166-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\6b6906f407e0eaed4bb50af2f8f3ed57\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:26:13-43
+167            android:exported="false"
+167-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\6b6906f407e0eaed4bb50af2f8f3ed57\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:27:13-37
+168            android:initOrder="100" />
+168-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\6b6906f407e0eaed4bb50af2f8f3ed57\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:28:13-36
+169
+170        <meta-data
+170-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\1e5770328175b88651c4505c7bf439a2\transformed\jetified-play-services-basement-18.4.0\AndroidManifest.xml:6:9-122
+171            android:name="com.google.android.gms.version"
+171-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\1e5770328175b88651c4505c7bf439a2\transformed\jetified-play-services-basement-18.4.0\AndroidManifest.xml:6:20-65
+172            android:value="@integer/google_play_services_version" />
+172-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\1e5770328175b88651c4505c7bf439a2\transformed\jetified-play-services-basement-18.4.0\AndroidManifest.xml:6:66-119
+173
+174        <provider
+174-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\01828e7b1ec7b6b7677a9414c79000de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+175            android:name="androidx.startup.InitializationProvider"
+175-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\01828e7b1ec7b6b7677a9414c79000de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+176            android:authorities="com.example.agripricechecker.androidx-startup"
+176-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\01828e7b1ec7b6b7677a9414c79000de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+177            android:exported="false" >
+177-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\01828e7b1ec7b6b7677a9414c79000de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+178            <meta-data
+178-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\01828e7b1ec7b6b7677a9414c79000de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+179                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+179-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\01828e7b1ec7b6b7677a9414c79000de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+180                android:value="androidx.startup" />
+180-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\01828e7b1ec7b6b7677a9414c79000de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+181            <meta-data
+181-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\7f1af8e30e417ccb3c94bec491e009a5\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+182                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+182-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\7f1af8e30e417ccb3c94bec491e009a5\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+183                android:value="androidx.startup" />
+183-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\7f1af8e30e417ccb3c94bec491e009a5\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+184        </provider> <!-- The activities will be merged into the manifest of the hosting app. -->
+185        <activity
+185-->[com.google.android.play:core-common:2.0.3] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\2a35362dc7c9bb1017829f29f36a6f3d\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:14:9-18:65
+186            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+186-->[com.google.android.play:core-common:2.0.3] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\2a35362dc7c9bb1017829f29f36a6f3d\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:15:13-93
+187            android:exported="false"
+187-->[com.google.android.play:core-common:2.0.3] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\2a35362dc7c9bb1017829f29f36a6f3d\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:16:13-37
+188            android:stateNotNeeded="true"
+188-->[com.google.android.play:core-common:2.0.3] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\2a35362dc7c9bb1017829f29f36a6f3d\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:17:13-42
+189            android:theme="@style/Theme.PlayCore.Transparent" />
+189-->[com.google.android.play:core-common:2.0.3] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\2a35362dc7c9bb1017829f29f36a6f3d\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:18:13-62
+190    </application>
+191
+192</manifest>

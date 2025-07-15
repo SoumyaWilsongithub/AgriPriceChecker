@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <!-- Add these if missing -->
+        <string name="no_data_found">No data found</string>
+        <string name="network_error">Network error occurred</string>
+
+        <!-- Keep your other strings here -->
+        <string name="logout">Logout</string>
+        <string name="logout_title">Logout</string>
+        <string name="logout_message">Do you really want to logout?</string>
+        <string name="yes">Yes</string>
+        <string name="no">No</string>
+        <string name="logged_out">Logged out successfully</string>
+        <string name="enter_crop_name">Enter crop name first</string>
+        <string name="app_name">Agri Price Checker</string>
+        <string name="select_crop_prompt">Select Crop</string>
+
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/iffco_white">
+
+    <!-- Heading Text -->
+    <TextView
+        android:id="@+id/chartHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crop Price Chart"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/iffco_green"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Price Line Chart -->
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/white" />
+</LinearLayout>

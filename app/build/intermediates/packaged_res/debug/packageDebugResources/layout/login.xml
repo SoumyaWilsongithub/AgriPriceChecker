@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/iffco_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- App Logo -->
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/farmer"
+            android:contentDescription="Logo"
+            android:layout_marginTop="32dp" />
+
+        <!-- Login Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login to Agri Price Checker"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/iffco_green"
+            android:gravity="center"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Email -->
+        <EditText
+            android:id="@+id/loginEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:textColor="@color/black"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:backgroundTint="@color/iffco_blue"
+            android:drawableLeft="@android:drawable/ic_dialog_email"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Password -->
+        <EditText
+            android:id="@+id/loginPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textColor="@color/black"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:backgroundTint="@color/iffco_blue"
+            android:drawableLeft="@android:drawable/ic_lock_idle_lock"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textStyle="bold"
+            android:textColor="@color/iffco_white"
+            android:backgroundTint="@color/iffco_green"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Go to Sign Up -->
+        <TextView
+            android:id="@+id/gotoSignup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account? Sign up here"
+            android:textColor="@color/iffco_blue"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+</ScrollView>

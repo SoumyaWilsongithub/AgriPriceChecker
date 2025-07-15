@@ -1,0 +1,4 @@
+com.example.agripricechecker.test.app-androidTest-0 H:\Android Studio Projects\AgriPriceChecker_Runnable\app\build\generated\res\resValues\androidTest\debug
+com.example.agripricechecker.test.app-mergeDebugAndroidTestResources-1 H:\Android Studio Projects\AgriPriceChecker_Runnable\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.agripricechecker.test.app-mergeDebugAndroidTestResources-2 H:\Android Studio Projects\AgriPriceChecker_Runnable\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.agripricechecker.test.app-debugAndroidTest-3 H:\Android Studio Projects\AgriPriceChecker_Runnable\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

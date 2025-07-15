@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.AgriPriceChecker" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+
+        <!-- IFFCO Colors -->
+        <item name="colorPrimary">@color/iffco_green</item>
+        <item name="colorPrimaryDark">@color/iffco_dark_gray</item>
+        <item name="colorAccent">@color/iffco_blue</item>
+
+        <!-- Optional: for Material 2 -->
+        <item name="colorSecondary">@color/iffco_blue</item>
+        <item name="colorOnPrimary">@color/iffco_white</item>
+        <item name="android:statusBarColor">@color/iffco_green</item>
+        <item name="android:navigationBarColor">@color/iffco_blue</item>
+
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+    </style>
+</resources>
