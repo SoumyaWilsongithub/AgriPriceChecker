@@ -9,5 +9,6 @@
         <item name="colorOnSecondary">@color/iffco_white</item>
 
         <item name="android:windowBackground">@color/iffco_dark_gray</item>
+
     </style>
 </resources>

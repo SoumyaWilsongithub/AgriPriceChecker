@@ -22,21 +22,21 @@ public final class ActivityChartCropSelectionBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final Spinner cropSpinner;
+  public final Button btnShowChart;
 
   @NonNull
-  public final TextView labelSelectCrop;
+  public final Spinner spinnerCropNames;
 
   @NonNull
-  public final Button viewChartBtn;
+  public final TextView tvSelectCrop;
 
   private ActivityChartCropSelectionBinding(@NonNull LinearLayout rootView,
-      @NonNull Spinner cropSpinner, @NonNull TextView labelSelectCrop,
-      @NonNull Button viewChartBtn) {
+      @NonNull Button btnShowChart, @NonNull Spinner spinnerCropNames,
+      @NonNull TextView tvSelectCrop) {
     this.rootView = rootView;
-    this.cropSpinner = cropSpinner;
-    this.labelSelectCrop = labelSelectCrop;
-    this.viewChartBtn = viewChartBtn;
+    this.btnShowChart = btnShowChart;
+    this.spinnerCropNames = spinnerCropNames;
+    this.tvSelectCrop = tvSelectCrop;
   }
 
   @Override
@@ -66,26 +66,26 @@ public final class ActivityChartCropSelectionBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.cropSpinner;
-      Spinner cropSpinner = ViewBindings.findChildViewById(rootView, id);
-      if (cropSpinner == null) {
+      id = R.id.btnShowChart;
+      Button btnShowChart = ViewBindings.findChildViewById(rootView, id);
+      if (btnShowChart == null) {
         break missingId;
       }
 
-      id = R.id.labelSelectCrop;
-      TextView labelSelectCrop = ViewBindings.findChildViewById(rootView, id);
-      if (labelSelectCrop == null) {
+      id = R.id.spinnerCropNames;
+      Spinner spinnerCropNames = ViewBindings.findChildViewById(rootView, id);
+      if (spinnerCropNames == null) {
         break missingId;
       }
 
-      id = R.id.viewChartBtn;
-      Button viewChartBtn = ViewBindings.findChildViewById(rootView, id);
-      if (viewChartBtn == null) {
+      id = R.id.tvSelectCrop;
+      TextView tvSelectCrop = ViewBindings.findChildViewById(rootView, id);
+      if (tvSelectCrop == null) {
         break missingId;
       }
 
-      return new ActivityChartCropSelectionBinding((LinearLayout) rootView, cropSpinner,
-          labelSelectCrop, viewChartBtn);
+      return new ActivityChartCropSelectionBinding((LinearLayout) rootView, btnShowChart,
+          spinnerCropNames, tvSelectCrop);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

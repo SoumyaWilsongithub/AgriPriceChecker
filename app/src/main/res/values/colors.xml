@@ -20,4 +20,34 @@
     <!-- Android defaults / Material baseline -->
     <color name="black">#000000</color>
     <color name="purple_700">#3700B3</color>
+    <color name="purple_500" /> <!-- Used for text on primary/secondary, and light surfaces -->
+
+    <!-- Supporting Shades for Light Theme -->
+    <color name="iffco_app_background_light">@color/iffco_gray</color> <!-- Main window background for light theme -->
+    <color name="iffco_surface_light">@color/iffco_white</color>    <!-- Card/dialog backgrounds for light theme -->
+    <color name="iffco_light_gray_divider">@color/iffco_light_gray</color> <!-- For dividers in light theme -->
+
+    <!-- Text & Hint Colors for Light Theme -->
+    <color name="text_color_primary_light">#DE000000</color> <!-- 87% Black -->
+    <color name="text_color_secondary_light">#8A000000</color> <!-- 60% Black -->
+    <color name="hint_color_light">#61000000</color>
+    <!-- IFFCO Brand Colors (can be same or adjusted for dark theme) -->
+    <color name="iffco_green_dark_theme">@color/iffco_green</color> <!-- Or use iffco_green_light if it looks better on dark -->
+    <color name="iffco_blue_dark_theme">@color/iffco_blue</color>   <!-- Or use iffco_blue_light -->
+    <color name="iffco_text_on_dark_primary">@color/iffco_white</color> <!-- For text on iffco_green/blue backgrounds in dark mode -->
+
+    <!-- Backgrounds & Surfaces for Dark Theme -->
+    <color name="iffco_app_background_dark">@color/iffco_dark_gray</color> <!-- Main window background for dark theme -->
+    <color name="iffco_surface_dark">#1E1E1E</color>      <!-- Slightly lighter than iffco_dark_gray for cards, dialogs -->
+    <color name="iffco_light_gray_divider_dark">#424242</color> <!-- Darker divider for dark theme -->
+
+
+    <!-- Text & Hint Colors for Dark Theme -->
+    <color name="text_color_primary_dark">#DEFFFFFF</color> <!-- 87% White -->
+    <color name="text_color_secondary_dark">#8AFFFFFF</color> <!-- 60% White -->
+    <color name="hint_color_dark">#61FFFFFF</color>
+
+    <!-- <color name="purple_500">#6200EE</color> -->
+
+    <!-- <color name="hint_color_dark">#99FFFFFF</color> -->
 </resources>

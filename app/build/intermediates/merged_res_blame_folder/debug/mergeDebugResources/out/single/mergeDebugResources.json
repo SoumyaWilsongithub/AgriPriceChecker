@@ -32,20 +32,16 @@
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\mipmap-mdpi\\farmer_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
-    },
-    {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\drawable_farmer_background.xml.flat",
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\drawable\\farmer_background.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\layout_price_item.xml.flat",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\layout\\price_item.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\layout_item_fertilizer.xml.flat",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\layout\\item_fertilizer.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\layout_price_item.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\layout\\price_item.xml"
     },
     {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
@@ -64,8 +60,12 @@
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\mipmap-xxxhdpi\\farmer_round.webp"
     },
     {
-        "merged": "com.example.agripricechecker.app-debug-38:/layout_activity_fertilizer.xml.flat",
-        "source": "com.example.agripricechecker.app-main-40:/layout/activity_fertilizer.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\drawable_spinner_background.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\drawable\\spinner_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\drawable_ic_arrow_drop_down_white_24dp.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\drawable\\ic_arrow_drop_down_white_24dp.xml"
     },
     {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\menu_menu_main.xml.flat",
@@ -80,12 +80,12 @@
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\layout_activity_crop_detail.xml.flat",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\layout\\activity_crop_detail.xml"
-    },
-    {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\mipmap-xhdpi_farmer_round.webp.flat",
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\mipmap-xhdpi\\farmer_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\layout_activity_crop_detail.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\layout\\activity_crop_detail.xml"
     },
     {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\mipmap-mdpi_app_round.webp.flat",
@@ -104,12 +104,12 @@
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\layout\\item_crop_calendar.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\mipmap-xxxhdpi_app_round.webp.flat",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\mipmap-xxxhdpi\\app_round.webp"
-    },
-    {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\mipmap-xhdpi_farmer.webp.flat",
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\mipmap-xhdpi\\farmer.webp"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\mipmap-xxxhdpi_app_round.webp.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\mipmap-xxxhdpi\\app_round.webp"
     },
     {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\layout_item_crop_name.xml.flat",
@@ -172,10 +172,6 @@
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\layout_activity_weather.xml.flat",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\layout\\activity_weather.xml"
-    },
-    {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\mipmap-xhdpi_ic_launcher_foreground.webp.flat",
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\mipmap-xhdpi\\ic_launcher_foreground.webp"
     },
@@ -216,6 +212,10 @@
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\mipmap-xxhdpi\\farmer.webp"
     },
     {
+        "merged": "com.example.agripricechecker.app-debug-38:/layout_activity_fetch_price.xml.flat",
+        "source": "com.example.agripricechecker.app-main-40:/layout/activity_fetch_price.xml"
+    },
+    {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\layout_activity_splash.xml.flat",
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\layout\\activity_splash.xml"
     },
@@ -236,12 +236,12 @@
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\mipmap-xhdpi_app.webp.flat",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\mipmap-xhdpi\\app.webp"
-    },
-    {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\mipmap-hdpi_ic_launcher_foreground.webp.flat",
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\mipmap-hdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\mipmap-xhdpi_app.webp.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\mipmap-xhdpi\\app.webp"
     },
     {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\mipmap-xhdpi_app_round.webp.flat",
@@ -254,10 +254,6 @@
     {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\mipmap-xhdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\drawable_news.png.flat",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\drawable\\news.png"
     },
     {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\drawable_app_background.xml.flat",
@@ -276,12 +272,12 @@
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\layout\\activity_fertilizer.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\drawable_farmer.png.flat",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\drawable\\farmer.png"
-    },
-    {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\drawable_arrow_right.png.flat",
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\drawable\\arrow_right.png"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\drawable_farmer.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\drawable\\farmer.png"
     },
     {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\mipmap-anydpi-v26_app.xml.flat",
@@ -312,12 +308,12 @@
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\mipmap-xxxhdpi\\app.webp"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\mipmap-mdpi_farmer_round.webp.flat",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\mipmap-mdpi\\farmer_round.webp"
-    },
-    {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\drawable_cropcalendar.png.flat",
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\drawable\\cropcalendar.png"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\mipmap-mdpi_farmer_round.webp.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\mipmap-mdpi\\farmer_round.webp"
     },
     {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-38:\\layout_spinner_item.xml.flat",

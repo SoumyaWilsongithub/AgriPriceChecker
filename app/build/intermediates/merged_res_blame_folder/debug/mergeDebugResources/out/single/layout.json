@@ -20,16 +20,20 @@
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\layout\\signup.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-mergeDebugResources-37:\\layout\\item_crop_name.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\layout\\item_crop_name.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-mergeDebugResources-37:\\layout\\login.xml",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\layout\\login.xml"
     },
     {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-mergeDebugResources-37:\\layout\\price_item.xml",
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\layout\\price_item.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-mergeDebugResources-37:\\layout\\login.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\layout\\login.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-mergeDebugResources-37:\\layout\\item_crop_name.xml",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\layout\\item_crop_name.xml"
+    },
+    {
+        "merged": "com.example.agripricechecker.app-mergeDebugResources-37:/layout/activity_fetch_price.xml",
+        "source": "com.example.agripricechecker.app-main-40:/layout/activity_fetch_price.xml"
     },
     {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-mergeDebugResources-37:\\layout\\activity_fetch_price.xml",
@@ -48,24 +52,12 @@
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-mergeDebugResources-37:\\layout\\item_fertilizer.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\layout\\item_fertilizer.xml"
-    },
-    {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-mergeDebugResources-37:\\layout\\activity_crop_detail.xml",
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\layout\\activity_crop_detail.xml"
     },
     {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-mergeDebugResources-37:\\layout\\activity_crop_calendar.xml",
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\layout\\activity_crop_calendar.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-mergeDebugResources-37:\\layout\\activity_weather.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-40:\\layout\\activity_weather.xml"
-    },
-    {
-        "merged": "com.example.agripricechecker.app-mergeDebugResources-37:/layout/activity_fertilizer.xml",
-        "source": "com.example.agripricechecker.app-main-40:/layout/activity_fertilizer.xml"
     },
     {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-mergeDebugResources-37:\\layout\\spinner_item.xml",

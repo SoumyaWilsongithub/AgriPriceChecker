@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="SpinnerStyle" parent="Theme.AppCompat.Light">
+
+    <!-- Spinner style for Light Mode -->
+    <style name="SpinnerStyle" parent="Widget.AppCompat.Spinner.DropDown">
+        <item name="android:theme">@style/ThemeOverlay.App.Spinner.Light.Original</item>
+        <item name="android:textColor">@color/iffco_dark_gray</item>
+    </style>
+
+    <!-- Overlay for spinner dropdown popup -->
+    <style name="ThemeOverlay.App.Spinner.Light.Original" parent="">
         <item name="android:popupBackground">@color/iffco_white</item>
+        <item name="android:textColorPrimary">@color/iffco_dark_gray</item>
         <item name="android:textColor">@color/iffco_dark_gray</item>
     </style>
 

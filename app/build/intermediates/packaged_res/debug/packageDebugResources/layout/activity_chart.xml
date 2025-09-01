@@ -27,4 +27,6 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/white" />
+    <!-- ProgressBar and FrameLayout removed -->
+
 </LinearLayout>

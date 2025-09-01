@@ -1,27 +1,45 @@
 R_DEF: Internal format may change without notice
 local
 color black
+color hint_color_dark
+color hint_color_light
+color iffco_app_background_dark
+color iffco_app_background_light
 color iffco_blue
+color iffco_blue_dark_theme
 color iffco_blue_light
 color iffco_dark_blue
 color iffco_dark_gray
 color iffco_gray
 color iffco_green
+color iffco_green_dark_theme
 color iffco_green_light
 color iffco_light_gray
+color iffco_light_gray_divider
+color iffco_light_gray_divider_dark
+color iffco_surface_dark
+color iffco_surface_light
+color iffco_text_on_dark_primary
 color iffco_white
 color iffco_white_translucent
+color purple_500
 color purple_700
+color text_color_primary_dark
+color text_color_primary_light
+color text_color_secondary_dark
+color text_color_secondary_light
 drawable app_background
 drawable arrow_right
 drawable cropcalendar
 drawable farmer
 drawable farmer_background
 drawable fetch_price
+drawable ic_arrow_drop_down_white_24dp
 drawable ic_launcher_background
 drawable logout
 drawable npk
 drawable price_trend
+drawable spinner_background
 drawable tip_section
 drawable useful
 id action_logout
@@ -30,6 +48,7 @@ id adviceText
 id btnChart
 id btnFetchPrice
 id btnNews
+id btnShowChart
 id btnTip
 id chartHeading
 id clearCropBtn
@@ -37,7 +56,6 @@ id cropCalendarRecycler
 id cropName
 id cropNameDetail
 id cropNameText
-id cropSpinner
 id date
 id detailCropName
 id fertilizerRecycler
@@ -48,7 +66,6 @@ id gotoLogin
 id gotoSignup
 id harvestText
 id harvesting
-id labelSelectCrop
 id lineChart
 id loginBtn
 id loginEmail
@@ -66,9 +83,10 @@ id signupName
 id signupPassword
 id sowing
 id sowingText
+id spinnerCropNames
 id spinnerText
+id tvSelectCrop
 id typeSpinner
-id viewChartBtn
 layout activity_chart
 layout activity_chart_crop_selection
 layout activity_crop_calendar
@@ -114,4 +132,5 @@ string project_id
 string select_crop_prompt
 string yes
 style SpinnerStyle
+style ThemeOverlay.App.Spinner.Light.Original
 style Theme.AgriPriceChecker

@@ -1,37 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:background="@color/iffco_white"
-    android:padding="24dp"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal">
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ChartCropSelectionActivity"
+    android:background="?android:attr/windowBackground">
 
-    <!-- Heading label -->
+    <!-- Title -->
     <TextView
-        android:id="@+id/labelSelectCrop"
+        android:id="@+id/tvSelectCrop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select Crop"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="@color/iffco_green"
-        android:layout_marginBottom="8dp"
-        android:layout_gravity="center" />
+        android:textColor="?android:attr/textColorPrimary" />
 
-    <!-- Crop Spinner -->
+    <!-- Spinner -->
     <Spinner
-        android:id="@+id/cropSpinner"
+        android:id="@+id/spinnerCropNames"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp" />
+        android:layout_marginTop="12dp"
+        android:background="@drawable/spinner_background" />
 
-    <!-- View Chart Button -->
+    <!-- Button -->
     <Button
-        android:id="@+id/viewChartBtn"
+        android:id="@+id/btnShowChart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="View Chart"
-        android:textColor="@color/iffco_white"
-        android:backgroundTint="@color/iffco_green"
-        android:textStyle="bold" />
+        android:layout_marginTop="20dp"
+        android:text="Show Chart"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="@android:color/white" />
+
 </LinearLayout>

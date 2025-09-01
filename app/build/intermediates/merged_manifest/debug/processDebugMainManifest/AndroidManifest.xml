@@ -32,6 +32,7 @@
         android:icon="@mipmap/app"
         android:label="Agri Price Checker"
         android:roundIcon="@mipmap/app"
+        android:testOnly="true"
         android:theme="@style/Theme.AgriPriceChecker"
         android:usesCleartextTraffic="true" >
 

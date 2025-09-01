@@ -1331,14 +1331,25 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color hint_color_dark
+color hint_color_light
+color iffco_app_background_dark
+color iffco_app_background_light
 color iffco_blue
+color iffco_blue_dark_theme
 color iffco_blue_light
 color iffco_dark_blue
 color iffco_dark_gray
 color iffco_gray
 color iffco_green
+color iffco_green_dark_theme
 color iffco_green_light
 color iffco_light_gray
+color iffco_light_gray_divider
+color iffco_light_gray_divider_dark
+color iffco_surface_dark
+color iffco_surface_light
+color iffco_text_on_dark_primary
 color iffco_white
 color iffco_white_translucent
 color m3_appbar_overlay_color
@@ -1974,6 +1985,7 @@ color primary_text_default_material_dark
 color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
+color purple_500
 color purple_700
 color ripple_material_dark
 color ripple_material_light
@@ -1987,6 +1999,10 @@ color switch_thumb_material_dark
 color switch_thumb_material_light
 color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
+color text_color_primary_dark
+color text_color_primary_light
+color text_color_secondary_dark
+color text_color_secondary_light
 color tooltip_background_dark
 color tooltip_background_light
 dimen abc_action_bar_content_inset_material
@@ -2888,6 +2904,7 @@ drawable fetch_price
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_arrow_back_black_24
+drawable ic_arrow_drop_down_white_24dp
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
@@ -2977,6 +2994,7 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable npk
 drawable price_trend
+drawable spinner_background
 drawable test_level_drawable
 drawable tip_section
 drawable tooltip_frame_dark
@@ -3083,6 +3101,7 @@ id browser_actions_menu_view
 id btnChart
 id btnFetchPrice
 id btnNews
+id btnShowChart
 id btnTip
 id buttonPanel
 id cancel_button
@@ -3118,7 +3137,6 @@ id cropCalendarRecycler
 id cropName
 id cropNameDetail
 id cropNameText
-id cropSpinner
 id custom
 id customPanel
 id cut
@@ -3216,7 +3234,6 @@ id italic
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
-id labelSelectCrop
 id labeled
 id layout
 id left
@@ -3400,6 +3417,7 @@ id sowing
 id sowingText
 id spacer
 id special_effects_controller_view_tag
+id spinnerCropNames
 id spinnerText
 id spline
 id split_action_bar
@@ -3466,13 +3484,13 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tvSelectCrop
 id typeSpinner
 id unchecked
 id uniform
 id unlabeled
 id up
 id useLogo
-id viewChartBtn
 id view_offset_helper
 id view_tree_lifecycle_owner
 id view_tree_on_back_pressed_dispatcher_owner
@@ -4527,6 +4545,7 @@ style Theme_MaterialComponents_Light_NoActionBar_Bridge
 style Theme_MaterialComponents_NoActionBar
 style Theme_MaterialComponents_NoActionBar_Bridge
 style Theme_PlayCore_Transparent
+style ThemeOverlay_App_Spinner_Light_Original
 style ThemeOverlay_AppCompat
 style ThemeOverlay_AppCompat_ActionBar
 style ThemeOverlay_AppCompat_Dark
