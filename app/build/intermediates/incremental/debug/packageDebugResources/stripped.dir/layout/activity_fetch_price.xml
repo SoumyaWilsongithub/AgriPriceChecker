@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fetchPriceLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/iffco_white"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/fetchTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check Crop Price"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/iffco_green"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Crop Type Label -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Crop Type:"
+        android:textColor="@color/iffco_blue"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Crop Type Spinner -->
+    <Spinner
+        android:id="@+id/typeSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        style="@style/SpinnerStyle"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Crop Name Label -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Crop:"
+        android:textColor="@color/iffco_blue"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Crop Name Input with Clear Button -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/cropName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter crop name"
+            android:paddingEnd="40dp"
+            android:textColor="@color/iffco_dark_gray"
+            android:backgroundTint="@color/iffco_blue" />
+
+        <ImageButton
+            android:id="@+id/clearCropBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:contentDescription="Clear text" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/fetchBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fetch Price"
+        android:backgroundTint="@color/iffco_blue"
+        android:textColor="@color/iffco_white"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
