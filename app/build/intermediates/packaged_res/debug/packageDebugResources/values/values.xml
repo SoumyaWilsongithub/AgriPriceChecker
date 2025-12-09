@@ -39,6 +39,7 @@
     <string name="google_app_id" translatable="false">1:1033173413755:android:343a3121ac69cfcd8a97de</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDWx6IHAjNBj4gDYRKOLGVVfJ0fJ3DChAw</string>
     <string name="google_storage_bucket" translatable="false">agripricechecker.firebasestorage.app</string>
+    <string name="image_to_classify">Image to be classified for crop disease</string>
     <string name="logged_out">Logged out successfully</string>
     <string name="logout">Logout</string>
     <string name="logout_message">Do you really want to logout?</string>
