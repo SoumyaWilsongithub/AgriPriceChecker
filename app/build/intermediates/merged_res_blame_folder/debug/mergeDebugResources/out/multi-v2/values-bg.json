@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.agripricechecker.app-mergeDebugResources-36:/values-bg/values-bg.xml",
+            "outputFile": "com.example.agripricechecker.app-mergeDebugResources-37:/values-bg/values-bg.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Dell\\.gradle\\caches\\9.0-milestone-1\\transforms\\ced6c8e50e3edb64bed364f629f46eaa\\transformed\\jetified-play-services-base-18.1.0\\res\\values-bg\\values.xml",

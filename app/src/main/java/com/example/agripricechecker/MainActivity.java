@@ -1,30 +1,26 @@
 package com.example.agripricechecker;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.*;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageButton btnFetchPrice, btnChart, btnTip, btnNews;
+    ImageButton btnFetchPrice, btnChart, btnTip, btnNews, btnWeather, btnDisease;
     FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main); // Your existing layout
+        setContentView(R.layout.activity_main);
 
-        // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
         // Initialize buttons
@@ -32,34 +28,29 @@ public class MainActivity extends AppCompatActivity {
         btnChart = findViewById(R.id.btnChart);
         btnTip = findViewById(R.id.btnTip);
         btnNews = findViewById(R.id.btnNews);
+        btnWeather = findViewById(R.id.btnWeather);
+        btnDisease = findViewById(R.id.btnDisease);
 
+        // Button click listeners
+        btnFetchPrice.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, FetchPriceActivity.class)));
 
-        // Set up button click actions
-        btnFetchPrice.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, FetchPriceActivity.class));
-        });
+        btnChart.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, ChartCropSelectionActivity.class)));
 
-        btnChart.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, ChartCropSelectionActivity.class));
-        });
+        btnTip.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, CropCalendarActivity.class)));
 
-        btnTip.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, CropCalendarActivity.class));
-        });
+        btnNews.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, FertilizerActivity.class)));
 
-        btnNews.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, FertilizerActivity.class));
-        });
+        btnWeather.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, WeatherActivity.class)));
+
+       // btnDisease.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, CropDiseaseActivity.class)));
     }
 
-    // Inflate the logout icon in toolbar
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu); // menu with logout icon
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
-    // Handle menu item click
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.action_logout) {
@@ -69,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    // Logout confirmation dialog
     private void showLogoutConfirmationDialog() {
         new AlertDialog.Builder(this)
                 .setTitle("Logout")

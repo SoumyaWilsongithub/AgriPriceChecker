@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:2:1-43:12
+ADDED from H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:2:1-45:12
 MERGED from [androidx.databinding:viewbinding:8.11.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\7ba95cb080358e11dc0d5f0d528c3e70\transformed\jetified-viewbinding-8.11.0\AndroidManifest.xml:2:1-7:12
 MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\cd2429c7b91a9c63e65566a0ea711645\transformed\jetified-MPAndroidChart-v3.1.0\AndroidManifest.xml:2:1-20:12
 MERGED from [com.google.android.material:material:1.9.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\93848a15fe130f47eced21d887ca1df9\transformed\material-1.9.0\AndroidManifest.xml:17:1-26:12
@@ -12,8 +12,10 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Dell\.gr
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\ebfbc78f35ce6fd9eca544f3ab310d43\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\f7fc22cac23fefe656225e0a8832ff0e\transformed\jetified-viewpager2-1.1.0-beta02\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.recyclerview:recyclerview:1.3.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\e816d74d8d87ad8c3494ac05a8d124b4\transformed\recyclerview-1.3.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:glide:4.16.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\829919102b1f54657b58d0b9e8800b58\transformed\jetified-glide-4.16.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-database:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\731d1e61bddb0da8d292e260a536427b\transformed\jetified-firebase-database-21.0.0\AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:17:1-75:12
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\2cf5da9e81530650129ddd699badb023\transformed\jetified-picasso-2.71828\AndroidManifest.xml:2:1-14:12
 MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\bb7a8956b9d1ea35de445f33446bc9a9\transformed\jetified-play-services-location-21.0.1\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\b22b7e5c523573a58b4d620e4eb8ba4a\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\439ab7ee45362708bdd35375faec1d31\transformed\jetified-firebase-appcheck-interop-17.1.0\AndroidManifest.xml:15:1-23:12
@@ -56,10 +58,12 @@ MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Dell\.gradle\c
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\7f1af8e30e417ccb3c94bec491e009a5\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:17:1-37:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\dd444ce0cc1e3b514089d97a1e85b946\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\e1c2cedc217831a0deb937742f7a76aa\transformed\jetified-savedstate-1.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.firebase:firebase-components:18.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\822f11e7a01f9e89801f5aceb4eb0ad2\transformed\jetified-firebase-components-18.0.0\AndroidManifest.xml:15:1-20:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\026fc20a2561c295f666203a2080a9e6\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.16.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\3939a5e1d440aa2b61d5c9995077e07a\transformed\jetified-gifdecoder-4.16.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\67c1b0f5c14312636c3cabbdf62fc8f7\transformed\exifinterface-1.3.6\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\8e9434b0b7c7c260b96b2e2101534db3\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\4ceba30e7c2ded52aac55d33af502555\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-components:18.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\822f11e7a01f9e89801f5aceb4eb0ad2\transformed\jetified-firebase-components-18.0.0\AndroidManifest.xml:15:1-20:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\026fc20a2561c295f666203a2080a9e6\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\308a69002d872ef6ab1f170f0ea8c99b\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\50732cc4a63bd263547fa25845df8a31\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\9a1b0963edfbb7f4f2fe9bf72c704d1e\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:17:1-24:12
@@ -98,8 +102,8 @@ ADDED from H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\And
 	android:name
 		ADDED from H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:8:22-78
 application
-ADDED from H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:10:5-41:19
-INJECTED from H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:10:5-41:19
+ADDED from H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:10:5-43:19
+INJECTED from H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:10:5-43:19
 MERGED from [com.google.android.material:material:1.9.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\93848a15fe130f47eced21d887ca1df9\transformed\material-1.9.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.9.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\93848a15fe130f47eced21d887ca1df9\transformed\material-1.9.0\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\6196224032462981318ae4b5195a66c2\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
@@ -108,6 +112,8 @@ MERGED from [com.google.firebase:firebase-database:21.0.0] C:\Users\Dell\.gradle
 MERGED from [com.google.firebase:firebase-database:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\731d1e61bddb0da8d292e260a536427b\transformed\jetified-firebase-database-21.0.0\AndroidManifest.xml:25:5-36:19
 MERGED from [com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:28:5-73:19
 MERGED from [com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:28:5-73:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\2cf5da9e81530650129ddd699badb023\transformed\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\2cf5da9e81530650129ddd699badb023\transformed\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
 MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\bb7a8956b9d1ea35de445f33446bc9a9\transformed\jetified-play-services-location-21.0.1\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\bb7a8956b9d1ea35de445f33446bc9a9\transformed\jetified-play-services-location-21.0.1\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\439ab7ee45362708bdd35375faec1d31\transformed\jetified-firebase-appcheck-interop-17.1.0\AndroidManifest.xml:21:5-20
@@ -221,9 +227,13 @@ ADDED from H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\And
 	android:name
 		ADDED from H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:38:19-53
 activity#com.example.agripricechecker.FertilizerDetailActivity
-ADDED from H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:39:9-62
+ADDED from H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:39:9-61
 	android:name
 		ADDED from H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:39:19-59
+activity#com.example.agripricechecker.WeatherActivity
+ADDED from H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:40:9-53
+	android:name
+		ADDED from H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml:40:19-50
 uses-sdk
 INJECTED from H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from H:\Android Studio Projects\AgriPriceChecker_Runnable\app\src\main\AndroidManifest.xml
@@ -244,10 +254,14 @@ MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] C:\Users\Dell\.gradle\
 MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\f7fc22cac23fefe656225e0a8832ff0e\transformed\jetified-viewpager2-1.1.0-beta02\AndroidManifest.xml:5:5-44
 MERGED from [androidx.recyclerview:recyclerview:1.3.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\e816d74d8d87ad8c3494ac05a8d124b4\transformed\recyclerview-1.3.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.recyclerview:recyclerview:1.3.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\e816d74d8d87ad8c3494ac05a8d124b4\transformed\recyclerview-1.3.1\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:glide:4.16.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\829919102b1f54657b58d0b9e8800b58\transformed\jetified-glide-4.16.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:glide:4.16.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\829919102b1f54657b58d0b9e8800b58\transformed\jetified-glide-4.16.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-database:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\731d1e61bddb0da8d292e260a536427b\transformed\jetified-firebase-database-21.0.0\AndroidManifest.xml:18:5-44
 MERGED from [com.google.firebase:firebase-database:21.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\731d1e61bddb0da8d292e260a536427b\transformed\jetified-firebase-database-21.0.0\AndroidManifest.xml:18:5-44
 MERGED from [com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:21:5-23:151
 MERGED from [com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:21:5-23:151
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\2cf5da9e81530650129ddd699badb023\transformed\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\2cf5da9e81530650129ddd699badb023\transformed\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\bb7a8956b9d1ea35de445f33446bc9a9\transformed\jetified-play-services-location-21.0.1\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\bb7a8956b9d1ea35de445f33446bc9a9\transformed\jetified-play-services-location-21.0.1\AndroidManifest.xml:5:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\b22b7e5c523573a58b4d620e4eb8ba4a\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
@@ -332,14 +346,18 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\Dell\.gradle\c
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\dd444ce0cc1e3b514089d97a1e85b946\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\e1c2cedc217831a0deb937742f7a76aa\transformed\jetified-savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\e1c2cedc217831a0deb937742f7a76aa\transformed\jetified-savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.firebase:firebase-components:18.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\822f11e7a01f9e89801f5aceb4eb0ad2\transformed\jetified-firebase-components-18.0.0\AndroidManifest.xml:18:5-44
-MERGED from [com.google.firebase:firebase-components:18.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\822f11e7a01f9e89801f5aceb4eb0ad2\transformed\jetified-firebase-components-18.0.0\AndroidManifest.xml:18:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\026fc20a2561c295f666203a2080a9e6\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\026fc20a2561c295f666203a2080a9e6\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.16.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\3939a5e1d440aa2b61d5c9995077e07a\transformed\jetified-gifdecoder-4.16.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.16.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\3939a5e1d440aa2b61d5c9995077e07a\transformed\jetified-gifdecoder-4.16.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\67c1b0f5c14312636c3cabbdf62fc8f7\transformed\exifinterface-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\67c1b0f5c14312636c3cabbdf62fc8f7\transformed\exifinterface-1.3.6\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\8e9434b0b7c7c260b96b2e2101534db3\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\8e9434b0b7c7c260b96b2e2101534db3\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\4ceba30e7c2ded52aac55d33af502555\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\4ceba30e7c2ded52aac55d33af502555\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-components:18.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\822f11e7a01f9e89801f5aceb4eb0ad2\transformed\jetified-firebase-components-18.0.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-components:18.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\822f11e7a01f9e89801f5aceb4eb0ad2\transformed\jetified-firebase-components-18.0.0\AndroidManifest.xml:18:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\026fc20a2561c295f666203a2080a9e6\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\026fc20a2561c295f666203a2080a9e6\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\308a69002d872ef6ab1f170f0ea8c99b\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\308a69002d872ef6ab1f170f0ea8c99b\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\50732cc4a63bd263547fa25845df8a31\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
@@ -456,6 +474,14 @@ ADDED from [com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\cach
 		ADDED from [com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:71:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-auth:23.2.1] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\09f4be17fbbde535c6ffe0855faf2288\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:70:17-109
+provider#com.squareup.picasso.PicassoProvider
+ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\2cf5da9e81530650129ddd699badb023\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+	android:authorities
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\2cf5da9e81530650129ddd699badb023\transformed\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+	android:exported
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\2cf5da9e81530650129ddd699badb023\transformed\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\2cf5da9e81530650129ddd699badb023\transformed\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
 service#androidx.credentials.playservices.CredentialProviderMetadataHolder
 ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Dell\.gradle\caches\9.0-milestone-1\transforms\6c57f728458f5bb6fbd38fe3dd712a80\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:24:9-32:19
 	android:enabled

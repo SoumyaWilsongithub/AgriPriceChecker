@@ -26,7 +26,7 @@ public class PriceAdapter extends RecyclerView.Adapter<PriceAdapter.ViewHolder> 
         PriceModel item = list.get(position);
         holder.crop.setText(item.getCrop());
         holder.market.setText("Market: " + item.getMarket());
-        holder.price.setText("Price: ₹" + item.getPrice());
+        holder.price.setText("Price: ₹" + item.getPrice() + " per quintal");
         holder.date.setText("Date: " + item.getDate());
     }
 
