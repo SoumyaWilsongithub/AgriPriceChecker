@@ -4,15 +4,12 @@
     android:layout_height="match_parent"
     android:background="@color/iffco_white"
     android:padding="24dp">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center_horizontal"
         android:layout_gravity="center_horizontal">
-
-        <!-- Crop Name -->
         <TextView
             android:id="@+id/detailCropName"
             android:layout_width="wrap_content"
@@ -24,8 +21,6 @@
             android:layout_marginTop="60dp"
             android:layout_marginBottom="24dp"
             android:gravity="center" />
-
-        <!-- NPK -->
         <TextView
             android:id="@+id/npkValue"
             android:layout_width="match_parent"
@@ -36,8 +31,6 @@
             android:textColor="@color/iffco_dark_gray"
             android:background="@color/iffco_gray"
             android:layout_marginBottom="12dp" />
-
-        <!-- Products -->
         <TextView
             android:id="@+id/productList"
             android:layout_width="match_parent"
@@ -48,8 +41,6 @@
             android:textColor="@color/iffco_dark_gray"
             android:background="@color/iffco_gray"
             android:layout_marginBottom="12dp" />
-
-        <!-- Advice -->
         <TextView
             android:id="@+id/adviceText"
             android:layout_width="match_parent"
@@ -60,6 +51,5 @@
             android:textColor="@color/iffco_dark_gray"
             android:background="@color/iffco_gray"
             android:layout_marginBottom="20dp" />
-
     </LinearLayout>
 </ScrollView>

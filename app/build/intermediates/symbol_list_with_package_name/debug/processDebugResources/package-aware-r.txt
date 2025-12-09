@@ -2892,6 +2892,7 @@ drawable common_google_signin_btn_text_light
 drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
+drawable crop_disease
 drawable cropcalendar
 drawable design_fab_background
 drawable design_ic_visibility
@@ -3000,6 +3001,7 @@ drawable tip_section
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable useful
+drawable weather
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -3099,10 +3101,12 @@ id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
 id btnChart
+id btnDisease
 id btnFetchPrice
 id btnNews
 id btnShowChart
 id btnTip
+id btnWeather
 id buttonPanel
 id cancel_button
 id center
@@ -3199,11 +3203,13 @@ id fitXY
 id fixed
 id flip
 id floating
+id forecastLayout
 id forever
 id fragment_container_view_tag
 id fullscreen_header
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id gotoLogin
 id gotoSignup
@@ -3232,6 +3238,8 @@ id inward
 id is_pooling_container_tag
 id italic
 id item_touch_helper_previous_elevation
+id ivIcon
+id ivWeatherIcon
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -3484,7 +3492,14 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tvCity
+id tvDay
+id tvDescription
+id tvHumidity
 id tvSelectCrop
+id tvSuggestion
+id tvTemp
+id tvWind
 id typeSpinner
 id unchecked
 id uniform
@@ -3627,6 +3642,7 @@ layout activity_fertilizer_detail
 layout activity_fetch_price
 layout activity_main
 layout activity_splash
+layout activity_weather
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout crop_item
@@ -3646,6 +3662,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout forecast_item
 layout item_crop_calendar
 layout item_crop_name
 layout login
@@ -3723,6 +3740,9 @@ mipmap farmer_round
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
+mipmap weather
+mipmap weather_foreground
+mipmap weather_round
 plurals mtrl_badge_content_description
 raw firebase_common_keep
 string abc_action_bar_home_description

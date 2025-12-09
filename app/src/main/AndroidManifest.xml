@@ -36,7 +36,9 @@
         <activity android:name=".CropCalendarActivity" />
         <activity android:name=".CropDetailActivity" />
         <activity android:name=".FertilizerActivity" />
-        <activity android:name=".FertilizerDetailActivity" />
+        <activity android:name=".FertilizerDetailActivity"/>
+        <activity android:name=".WeatherActivity" />
+
 
     </application>
 

@@ -65,6 +65,7 @@
         <activity android:name="com.example.agripricechecker.CropDetailActivity" />
         <activity android:name="com.example.agripricechecker.FertilizerActivity" />
         <activity android:name="com.example.agripricechecker.FertilizerDetailActivity" />
+        <activity android:name="com.example.agripricechecker.WeatherActivity" />
 
         <service
             android:name="com.google.firebase.components.ComponentDiscoveryService"
@@ -123,6 +124,11 @@
                     android:scheme="recaptcha" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.example.agripricechecker.com.squareup.picasso"
+            android:exported="false" />
 
         <service
             android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder"

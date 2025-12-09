@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.agripricechecker.app-mergeDebugResources-36:/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "com.example.agripricechecker.app-mergeDebugResources-37:/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Dell\\.gradle\\caches\\9.0-milestone-1\\transforms\\e8d696188ed3412328e0d165a6b3e494\\transformed\\jetified-play-services-auth-20.7.0\\res\\values-watch-v20\\values.xml",

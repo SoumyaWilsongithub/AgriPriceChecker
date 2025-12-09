@@ -79,7 +79,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\Dell\Desktop\agri app\app.png" />
+                                                <entry key="imagePath" value="C:\Users\Dell\OneDrive\Desktop\agri app\weather.png" />
                                                 <entry key="scalingPercent" value="80" />
                                               </map>
                                             </option>
@@ -112,7 +112,7 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="outputName" value="app" />
+                                      <entry key="outputName" value="weather" />
                                     </map>
                                   </option>
                                 </PersistentState>

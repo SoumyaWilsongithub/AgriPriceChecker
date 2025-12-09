@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -17,10 +18,13 @@ import java.lang.String;
 
 public final class ActivityMainBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final ScrollView rootView;
 
   @NonNull
   public final ImageButton btnChart;
+
+  @NonNull
+  public final ImageButton btnDisease;
 
   @NonNull
   public final ImageButton btnFetchPrice;
@@ -32,22 +36,28 @@ public final class ActivityMainBinding implements ViewBinding {
   public final ImageButton btnTip;
 
   @NonNull
+  public final ImageButton btnWeather;
+
+  @NonNull
   public final LinearLayout mainLayout;
 
-  private ActivityMainBinding(@NonNull LinearLayout rootView, @NonNull ImageButton btnChart,
-      @NonNull ImageButton btnFetchPrice, @NonNull ImageButton btnNews, @NonNull ImageButton btnTip,
+  private ActivityMainBinding(@NonNull ScrollView rootView, @NonNull ImageButton btnChart,
+      @NonNull ImageButton btnDisease, @NonNull ImageButton btnFetchPrice,
+      @NonNull ImageButton btnNews, @NonNull ImageButton btnTip, @NonNull ImageButton btnWeather,
       @NonNull LinearLayout mainLayout) {
     this.rootView = rootView;
     this.btnChart = btnChart;
+    this.btnDisease = btnDisease;
     this.btnFetchPrice = btnFetchPrice;
     this.btnNews = btnNews;
     this.btnTip = btnTip;
+    this.btnWeather = btnWeather;
     this.mainLayout = mainLayout;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -78,6 +88,12 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnDisease;
+      ImageButton btnDisease = ViewBindings.findChildViewById(rootView, id);
+      if (btnDisease == null) {
+        break missingId;
+      }
+
       id = R.id.btnFetchPrice;
       ImageButton btnFetchPrice = ViewBindings.findChildViewById(rootView, id);
       if (btnFetchPrice == null) {
@@ -96,10 +112,20 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      LinearLayout mainLayout = (LinearLayout) rootView;
+      id = R.id.btnWeather;
+      ImageButton btnWeather = ViewBindings.findChildViewById(rootView, id);
+      if (btnWeather == null) {
+        break missingId;
+      }
 
-      return new ActivityMainBinding((LinearLayout) rootView, btnChart, btnFetchPrice, btnNews,
-          btnTip, mainLayout);
+      id = R.id.mainLayout;
+      LinearLayout mainLayout = ViewBindings.findChildViewById(rootView, id);
+      if (mainLayout == null) {
+        break missingId;
+      }
+
+      return new ActivityMainBinding((ScrollView) rootView, btnChart, btnDisease, btnFetchPrice,
+          btnNews, btnTip, btnWeather, mainLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

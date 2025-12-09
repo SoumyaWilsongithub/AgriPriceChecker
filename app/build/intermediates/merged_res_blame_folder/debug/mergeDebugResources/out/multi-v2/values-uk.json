@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.agripricechecker.app-mergeDebugResources-36:/values-uk/values-uk.xml",
+            "outputFile": "com.example.agripricechecker.app-mergeDebugResources-37:/values-uk/values-uk.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Dell\\.gradle\\caches\\9.0-milestone-1\\transforms\\5478c49ae55e0093d5fbe715f73621af\\transformed\\browser-1.4.0\\res\\values-uk\\values-uk.xml",
