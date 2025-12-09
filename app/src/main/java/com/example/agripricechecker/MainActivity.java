@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         btnTip = findViewById(R.id.btnTip);
         btnNews = findViewById(R.id.btnNews);
         btnWeather = findViewById(R.id.btnWeather);
-        btnDisease = findViewById(R.id.btnDisease);
+        btnDisease = findViewById(R.id.btnDisease); // Initialized
 
         // Button click listeners
         btnFetchPrice.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, FetchPriceActivity.class)));
@@ -42,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
         btnWeather.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, WeatherActivity.class)));
 
-       // btnDisease.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, CropDiseaseActivity.class)));
+        // 🟢 UPDATED: Click listener to launch the new CropDiseaseActivity
+        btnDisease.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, CropDiseaseActivity.class)));
     }
 
     @Override
