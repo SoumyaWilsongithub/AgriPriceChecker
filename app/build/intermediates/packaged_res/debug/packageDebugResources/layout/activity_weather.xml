@@ -62,13 +62,6 @@
             android:textColor="@color/iffco_green_light"
             android:layout_marginTop="4dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2-Day Forecast"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:layout_marginTop="16dp"/>
 
         <LinearLayout
             android:id="@+id/forecastLayout"

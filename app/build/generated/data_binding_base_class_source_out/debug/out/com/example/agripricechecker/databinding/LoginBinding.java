@@ -22,6 +22,9 @@ public final class LoginBinding implements ViewBinding {
   private final ScrollView rootView;
 
   @NonNull
+  public final Button btnSwitchLang;
+
+  @NonNull
   public final TextView gotoSignup;
 
   @NonNull
@@ -33,13 +36,19 @@ public final class LoginBinding implements ViewBinding {
   @NonNull
   public final EditText loginPassword;
 
-  private LoginBinding(@NonNull ScrollView rootView, @NonNull TextView gotoSignup,
-      @NonNull Button loginBtn, @NonNull EditText loginEmail, @NonNull EditText loginPassword) {
+  @NonNull
+  public final TextView loginTitle;
+
+  private LoginBinding(@NonNull ScrollView rootView, @NonNull Button btnSwitchLang,
+      @NonNull TextView gotoSignup, @NonNull Button loginBtn, @NonNull EditText loginEmail,
+      @NonNull EditText loginPassword, @NonNull TextView loginTitle) {
     this.rootView = rootView;
+    this.btnSwitchLang = btnSwitchLang;
     this.gotoSignup = gotoSignup;
     this.loginBtn = loginBtn;
     this.loginEmail = loginEmail;
     this.loginPassword = loginPassword;
+    this.loginTitle = loginTitle;
   }
 
   @Override
@@ -69,6 +78,12 @@ public final class LoginBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnSwitchLang;
+      Button btnSwitchLang = ViewBindings.findChildViewById(rootView, id);
+      if (btnSwitchLang == null) {
+        break missingId;
+      }
+
       id = R.id.gotoSignup;
       TextView gotoSignup = ViewBindings.findChildViewById(rootView, id);
       if (gotoSignup == null) {
@@ -93,8 +108,14 @@ public final class LoginBinding implements ViewBinding {
         break missingId;
       }
 
-      return new LoginBinding((ScrollView) rootView, gotoSignup, loginBtn, loginEmail,
-          loginPassword);
+      id = R.id.loginTitle;
+      TextView loginTitle = ViewBindings.findChildViewById(rootView, id);
+      if (loginTitle == null) {
+        break missingId;
+      }
+
+      return new LoginBinding((ScrollView) rootView, btnSwitchLang, gotoSignup, loginBtn,
+          loginEmail, loginPassword, loginTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

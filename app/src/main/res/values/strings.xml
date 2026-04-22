@@ -1,19 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-        <!-- Add these if missing -->
-        <string name="no_data_found">No data found</string>
-        <string name="network_error">Network error occurred</string>
+        <string name="app_name">Kisan Sathi</string>
+        <string name="welcome">Welcome</string>
 
-        <!-- Keep your other strings here -->
+        <!-- Main Menu -->
+        <string name="fetch_price">Fetch Price</string>
+        <string name="price_trend">Price Trend</string>
+        <string name="crop_calendar">Crop Calendar</string>
+        <string name="fert_rec">Fertilizer Recommendation</string>
+        <string name="weather">Weather Forecast</string>
+        <string name="disease">Disease Detection</string>
+
+        <!-- Language -->
+        <string name="choose_language">Choose Language</string>
+
+        <!-- Crop Categories -->
+        <string name="title_weather">Weather</string>
+        <string name="all">All</string>
+        <string name="grain">Grain</string>
+        <string name="pulse">Pulse</string>
+        <string name="vegetable">Vegetable</string>
+        <string name="fruit">Fruit</string>
+
+        <!-- Mandi Labels -->
+        <string name="market_label">Market</string>
+        <string name="date_label">Date</string>
+        <string name="price_label">Price</string>
+        <string name="quintal">Quintal</string>
+
+        <!-- Fetch Price -->
+        <string name="check_crop_price">Check Crop Price</string>
+        <string name="select_crop_type">Select Crop Type</string>
+        <string name="select_crop">Select Crop</string>
+        <string name="select_crop_prompt">Select Crop:</string>
+        <string name="enter_crop_name">Enter crop name</string>
+        <string name="enter_crop_name_error">Please select a crop first</string>
+
+        <string name="enter_crop_error">Enter crop name</string>
+        <string name="no_price_data">No price data found</string>
+        <string name="no_up_mandi">No UP mandi data found</string>
+
+        <!-- Chart -->
+        <string name="price_chart_title">%1$s Price Chart</string>
+        <string name="simulated_trend_label">Next 7 Days Simulated Price Trend</string>
+
+        <!-- Crop Names -->
+        <string name="crop_rice">Rice</string>
+        <string name="crop_wheat">Wheat</string>
+        <string name="crop_maize">Maize</string>
+        <string name="crop_potato">Potato</string>
+        <string name="crop_onion">Onion</string>
+        <string name="crop_tomato">Tomato</string>
+        <string name="result">Result</string>
+        <string name="title_main">Home</string>
+
+        <string name="title_fetch">Fetch Price</string>
+
+
+
+
+        <!-- Crop Disease -->
+        <string name="image_to_classify">Image to be classified for crop disease</string>
+
+        <string name="soil_test_title">Soil Test Simulation</string>
+        <string name="select_soil">Select Soil Type</string>
+        <string name="check_soil">Check Soil</string>
+
+        <!-- Authentication -->
         <string name="logout">Logout</string>
         <string name="logout_title">Logout</string>
         <string name="logout_message">Do you really want to logout?</string>
         <string name="yes">Yes</string>
         <string name="no">No</string>
         <string name="logged_out">Logged out successfully</string>
-        <string name="enter_crop_name">Enter crop name first</string>
-        <string name="app_name">Agri Price Checker</string>
-        <string name="select_crop_prompt">Select Crop</string>
-        <string name="image_to_classify">Image to be classified for crop disease</string>
+        <string name="logged_out_toast">Logged out</string>
+
+        <!-- Errors -->
+        <string name="no_data_found">No data found</string>
+        <string name="network_error">Network error occurred</string>
+
 </resources>

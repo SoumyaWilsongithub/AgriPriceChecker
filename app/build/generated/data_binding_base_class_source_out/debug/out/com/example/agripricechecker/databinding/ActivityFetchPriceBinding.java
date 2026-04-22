@@ -28,6 +28,9 @@ public final class ActivityFetchPriceBinding implements ViewBinding {
   public final ImageButton clearCropBtn;
 
   @NonNull
+  public final TextView cropLabel;
+
+  @NonNull
   public final AutoCompleteTextView cropName;
 
   @NonNull
@@ -43,20 +46,26 @@ public final class ActivityFetchPriceBinding implements ViewBinding {
   public final RecyclerView recyclerView;
 
   @NonNull
+  public final TextView typeLabel;
+
+  @NonNull
   public final Spinner typeSpinner;
 
   private ActivityFetchPriceBinding(@NonNull LinearLayout rootView,
-      @NonNull ImageButton clearCropBtn, @NonNull AutoCompleteTextView cropName,
-      @NonNull Button fetchBtn, @NonNull LinearLayout fetchPriceLayout,
-      @NonNull TextView fetchTitle, @NonNull RecyclerView recyclerView,
+      @NonNull ImageButton clearCropBtn, @NonNull TextView cropLabel,
+      @NonNull AutoCompleteTextView cropName, @NonNull Button fetchBtn,
+      @NonNull LinearLayout fetchPriceLayout, @NonNull TextView fetchTitle,
+      @NonNull RecyclerView recyclerView, @NonNull TextView typeLabel,
       @NonNull Spinner typeSpinner) {
     this.rootView = rootView;
     this.clearCropBtn = clearCropBtn;
+    this.cropLabel = cropLabel;
     this.cropName = cropName;
     this.fetchBtn = fetchBtn;
     this.fetchPriceLayout = fetchPriceLayout;
     this.fetchTitle = fetchTitle;
     this.recyclerView = recyclerView;
+    this.typeLabel = typeLabel;
     this.typeSpinner = typeSpinner;
   }
 
@@ -93,6 +102,12 @@ public final class ActivityFetchPriceBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.cropLabel;
+      TextView cropLabel = ViewBindings.findChildViewById(rootView, id);
+      if (cropLabel == null) {
+        break missingId;
+      }
+
       id = R.id.cropName;
       AutoCompleteTextView cropName = ViewBindings.findChildViewById(rootView, id);
       if (cropName == null) {
@@ -119,14 +134,20 @@ public final class ActivityFetchPriceBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.typeLabel;
+      TextView typeLabel = ViewBindings.findChildViewById(rootView, id);
+      if (typeLabel == null) {
+        break missingId;
+      }
+
       id = R.id.typeSpinner;
       Spinner typeSpinner = ViewBindings.findChildViewById(rootView, id);
       if (typeSpinner == null) {
         break missingId;
       }
 
-      return new ActivityFetchPriceBinding((LinearLayout) rootView, clearCropBtn, cropName,
-          fetchBtn, fetchPriceLayout, fetchTitle, recyclerView, typeSpinner);
+      return new ActivityFetchPriceBinding((LinearLayout) rootView, clearCropBtn, cropLabel,
+          cropName, fetchBtn, fetchPriceLayout, fetchTitle, recyclerView, typeLabel, typeSpinner);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

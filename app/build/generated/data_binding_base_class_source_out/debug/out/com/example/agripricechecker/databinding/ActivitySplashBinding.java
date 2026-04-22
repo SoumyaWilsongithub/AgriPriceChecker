@@ -5,19 +5,31 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.agripricechecker.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class ActivitySplashBinding implements ViewBinding {
   @NonNull
   private final LinearLayout rootView;
 
-  private ActivitySplashBinding(@NonNull LinearLayout rootView) {
+  @NonNull
+  public final TextView appNameEnglish;
+
+  @NonNull
+  public final TextView appNameHindi;
+
+  private ActivitySplashBinding(@NonNull LinearLayout rootView, @NonNull TextView appNameEnglish,
+      @NonNull TextView appNameHindi) {
     this.rootView = rootView;
+    this.appNameEnglish = appNameEnglish;
+    this.appNameHindi = appNameHindi;
   }
 
   @Override
@@ -43,10 +55,25 @@ public final class ActivitySplashBinding implements ViewBinding {
 
   @NonNull
   public static ActivitySplashBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.appNameEnglish;
+      TextView appNameEnglish = ViewBindings.findChildViewById(rootView, id);
+      if (appNameEnglish == null) {
+        break missingId;
+      }
 
-    return new ActivitySplashBinding((LinearLayout) rootView);
+      id = R.id.appNameHindi;
+      TextView appNameHindi = ViewBindings.findChildViewById(rootView, id);
+      if (appNameHindi == null) {
+        break missingId;
+      }
+
+      return new ActivitySplashBinding((LinearLayout) rootView, appNameEnglish, appNameHindi);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

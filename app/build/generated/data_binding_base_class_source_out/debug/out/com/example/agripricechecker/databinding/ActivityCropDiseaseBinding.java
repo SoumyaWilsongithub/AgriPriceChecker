@@ -38,6 +38,9 @@ public final class ActivityCropDiseaseBinding implements ViewBinding {
   public final CardView resultCard;
 
   @NonNull
+  public final TextView resultLabel;
+
+  @NonNull
   public final TextView resultTextView;
 
   @NonNull
@@ -45,14 +48,15 @@ public final class ActivityCropDiseaseBinding implements ViewBinding {
 
   private ActivityCropDiseaseBinding(@NonNull ConstraintLayout rootView,
       @NonNull Button btnClassify, @NonNull Button btnSelectImage, @NonNull Button btnTakePhoto,
-      @NonNull ImageView imageView, @NonNull CardView resultCard, @NonNull TextView resultTextView,
-      @NonNull TextView titleTextView) {
+      @NonNull ImageView imageView, @NonNull CardView resultCard, @NonNull TextView resultLabel,
+      @NonNull TextView resultTextView, @NonNull TextView titleTextView) {
     this.rootView = rootView;
     this.btnClassify = btnClassify;
     this.btnSelectImage = btnSelectImage;
     this.btnTakePhoto = btnTakePhoto;
     this.imageView = imageView;
     this.resultCard = resultCard;
+    this.resultLabel = resultLabel;
     this.resultTextView = resultTextView;
     this.titleTextView = titleTextView;
   }
@@ -114,6 +118,12 @@ public final class ActivityCropDiseaseBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.resultLabel;
+      TextView resultLabel = ViewBindings.findChildViewById(rootView, id);
+      if (resultLabel == null) {
+        break missingId;
+      }
+
       id = R.id.resultTextView;
       TextView resultTextView = ViewBindings.findChildViewById(rootView, id);
       if (resultTextView == null) {
@@ -127,7 +137,8 @@ public final class ActivityCropDiseaseBinding implements ViewBinding {
       }
 
       return new ActivityCropDiseaseBinding((ConstraintLayout) rootView, btnClassify,
-          btnSelectImage, btnTakePhoto, imageView, resultCard, resultTextView, titleTextView);
+          btnSelectImage, btnTakePhoto, imageView, resultCard, resultLabel, resultTextView,
+          titleTextView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

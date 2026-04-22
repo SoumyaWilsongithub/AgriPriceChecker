@@ -3,6 +3,8 @@ package com.example.agripricechecker;
 import com.google.gson.annotations.SerializedName;
 
 public class MandiRecord {
+    @SerializedName("state")
+    public String state;
     @SerializedName("commodity")
     public String commodity;
     @SerializedName("market")

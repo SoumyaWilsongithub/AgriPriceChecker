@@ -10,211 +10,80 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp"
-        android:background="@color/iffco_white"
+        android:background="#FFFFFF"
         android:gravity="top">
 
         <!-- FARMER ICON -->
         <ImageView
             android:layout_width="100dp"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
             android:src="@drawable/farmer"
-            android:background="@android:color/transparent"
             android:scaleType="fitCenter" />
 
-        <!-- WELCOME -->
+        <!-- WELCOME TEXT (Connected to Java) -->
         <TextView
+            android:id="@+id/tvWelcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
-            android:text="Welcome"
-            android:textColor="@color/iffco_dark_gray"
+            android:text="@string/welcome"
+            android:textColor="#333333"
             android:textSize="24sp"
             android:textStyle="bold" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
 
         <!-- ROW 1 : FETCH PRICE + PRICE TREND -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="40dp">
+            android:layout_marginTop="30dp">
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center">
-
-                <ImageButton
-                    android:id="@+id/btnFetchPrice"
-                    android:layout_width="100dp"
-                    android:layout_height="150dp"
-                    android:src="@drawable/fetch_price"
-                    android:background="@android:color/transparent"
-                    android:scaleType="fitCenter" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Fetch Price"
-                    android:textColor="@color/iffco_green_light"
-                    android:textSize="14sp"
-                    android:layout_marginTop="8dp" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <ImageButton android:id="@+id/btnFetchPrice" android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/fetch_price" android:background="?attr/selectableItemBackground" android:scaleType="fitCenter" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fetch_price" android:textColor="#2E7D32" android:textSize="14sp" android:layout_marginTop="4dp" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center">
-
-                <ImageButton
-                    android:id="@+id/btnChart"
-                    android:layout_width="100dp"
-                    android:layout_height="150dp"
-                    android:src="@drawable/price_trend"
-                    android:background="@android:color/transparent"
-                    android:scaleType="fitCenter" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Price Trend"
-                    android:textColor="@color/iffco_blue"
-                    android:textSize="14sp"
-                    android:layout_marginTop="8dp" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <ImageButton android:id="@+id/btnChart" android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/price_trend" android:background="?attr/selectableItemBackground" android:scaleType="fitCenter" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/price_trend" android:textColor="#1565C0" android:textSize="14sp" android:layout_marginTop="4dp" />
             </LinearLayout>
         </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
 
         <!-- ROW 2 : CROP CALENDAR + FERTILIZER -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="40dp">
+            android:layout_marginTop="30dp">
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center">
-
-                <ImageButton
-                    android:id="@+id/btnTip"
-                    android:layout_width="100dp"
-                    android:layout_height="150dp"
-                    android:src="@drawable/cropcalendar"
-                    android:background="@android:color/transparent"
-                    android:scaleType="fitCenter" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Crop Calendar"
-                    android:textColor="@color/iffco_blue"
-                    android:textSize="14sp"
-                    android:layout_marginTop="8dp" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <ImageButton android:id="@+id/btnTip" android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/cropcalendar" android:background="?attr/selectableItemBackground" android:scaleType="fitCenter" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/crop_calendar" android:textColor="#1565C0" android:textSize="14sp" android:layout_marginTop="4dp" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center">
-
-                <ImageButton
-                    android:id="@+id/btnNews"
-                    android:layout_width="100dp"
-                    android:layout_height="150dp"
-                    android:src="@drawable/npk"
-                    android:background="@android:color/transparent"
-                    android:scaleType="fitCenter" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Fertilizer Recommendation"
-                    android:textColor="@color/iffco_green_light"
-                    android:textSize="14sp"
-                    android:layout_marginTop="8dp" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <ImageButton android:id="@+id/btnNews" android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/npk" android:background="?attr/selectableItemBackground" android:scaleType="fitCenter" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fert_rec" android:textColor="#2E7D32" android:textSize="14sp" android:layout_marginTop="4dp" />
             </LinearLayout>
         </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
 
         <!-- ROW 3 : WEATHER + DISEASE -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="40dp">
+            android:layout_marginTop="30dp">
 
-            <!-- WEATHER -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center">
-
-                <ImageButton
-                    android:id="@+id/btnWeather"
-                    android:layout_width="100dp"
-                    android:layout_height="150dp"
-                    android:src="@drawable/weather"
-                    android:background="@android:color/transparent"
-                    android:scaleType="fitCenter" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Weather Forecast"
-                    android:textColor="@color/iffco_blue"
-                    android:textSize="14sp"
-                    android:layout_marginTop="8dp" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <ImageButton android:id="@+id/btnWeather" android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/weather" android:background="?attr/selectableItemBackground" android:scaleType="fitCenter" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/weather" android:textColor="#1565C0" android:textSize="14sp" android:layout_marginTop="4dp" />
             </LinearLayout>
 
-            <!-- DISEASE -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center">
-
-                <ImageButton
-                    android:id="@+id/btnDisease"
-                    android:layout_width="100dp"
-                    android:layout_height="150dp"
-                    android:src="@drawable/crop_disease"
-                    android:background="@android:color/transparent"
-                    android:scaleType="fitCenter" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Disease Detection"
-                    android:textColor="@color/iffco_green_light"
-                    android:textSize="14sp"
-                    android:layout_marginTop="8dp" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <ImageButton android:id="@+id/btnDisease" android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/crop_disease" android:background="?attr/selectableItemBackground" android:scaleType="fitCenter" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/disease" android:textColor="#2E7D32" android:textSize="14sp" android:layout_marginTop="4dp" />
             </LinearLayout>
         </LinearLayout>
 

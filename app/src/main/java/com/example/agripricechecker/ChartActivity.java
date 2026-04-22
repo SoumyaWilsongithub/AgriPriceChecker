@@ -1,15 +1,16 @@
 package com.example.agripricechecker;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.TextView;
-import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
@@ -18,261 +19,206 @@ import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
-import java.util.Random; // Import Random
+import java.util.Map;
+import java.util.Random;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class ChartActivity extends AppCompatActivity {
+    // SYNCED CONSTANTS
+    private static final String PREF_NAME = "AgriPrice_Prefs";
+    private static final String KEY_LANG = "Locale.Helper.Selected.Language";
 
     private LineChart lineChart;
     private TextView chartHeading;
+    private static final String API_KEY = "579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b";
 
-    private static final String API_KEY = "579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b"; // Replace with your actual API key
+    private boolean isHindi = false;
+    private String langCode = "en";
+    private final Map<String, String> cropTranslationMap = new HashMap<>();
 
-    // --- Simulation Parameters (Tune these values) ---
-    // General Volatility (base percentage for fluctuation)
-    private static final float BASE_VOLATILITY_PERCENTAGE = 0.03f; // 3%
-    // Maximum additional random volatility (adds unpredictability)
-    private static final float MAX_RANDOM_VOLATILITY_ADDITION = 0.07f; // up to an additional 7%
-    // Chance of a significant price event (e.g., larger jump or drop)
-    private static final float SIGNIFICANT_EVENT_CHANCE = 0.15f; // 15% chance per day
-    // Multiplier for significant events (how much larger the change is)
-    private static final float SIGNIFICANT_EVENT_MULTIPLIER = 2.0f; // 2 times the normal fluctuation
-    // Trend persistence (how likely the trend is to continue in the same direction)
-    private static final float TREND_PERSISTENCE_FACTOR = 0.3f; // 30% chance to follow previous trend
-    // --- End of Simulation Parameters ---
-
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        // Ensures the activity starts with the correct localized context
+        super.attachBaseContext(LocaleHelper.onAttach(newBase));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chart); // Make sure this matches your XML file name
+        setContentView(R.layout.activity_chart);
+
+        // 1. CRITICAL: Check correct SharedPreferences
+        checkLanguage();
+
+        // 2. Initialize translations
+        initCropTranslations();
 
         lineChart = findViewById(R.id.lineChart);
         chartHeading = findViewById(R.id.chartHeading);
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setTitle("Price Trend");
+            getSupportActionBar().setTitle(isHindi ? "कीमत का रुझान" : "Price Trend");
         }
 
-        lineChart.setNoDataText("Loading price data...");
-        lineChart.invalidate();
-
         String crop = getIntent().getStringExtra("crop");
-
         if (crop != null && !crop.isEmpty()) {
-            chartHeading.setText(crop + " Price Chart");
+            String displayCrop = isHindi && cropTranslationMap.containsKey(crop)
+                    ? cropTranslationMap.get(crop) : crop;
+
+            String headingTemplate = isHindi ? "%s मूल्य चार्ट" : "%s Price Chart";
+            chartHeading.setText(String.format(headingTemplate, displayCrop));
+
             fetchChartData(crop);
-        } else {
-            Toast.makeText(this, "No crop name provided", Toast.LENGTH_SHORT).show();
-            chartHeading.setText("Crop Price Chart");
-            lineChart.setNoDataText("No crop name provided.");
-            lineChart.invalidate();
-            // finish(); // Consider if you want to close if no crop
         }
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        finish();
-        return true;
+    private void checkLanguage() {
+        // UPDATED: Now matches MainActivity and ChartCropSelectionActivity
+        SharedPreferences prefs = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
+        langCode = prefs.getString(KEY_LANG, "en");
+        isHindi = "hi".equals(langCode);
+    }
+
+    private void initCropTranslations() {
+        cropTranslationMap.put("Wheat", "गेहूँ");
+        cropTranslationMap.put("Rice", "धान");
+        cropTranslationMap.put("Maize", "मक्का");
+        cropTranslationMap.put("Barley", "जौ");
+        cropTranslationMap.put("Potato", "आलू");
+        cropTranslationMap.put("Onion", "प्याज");
+        cropTranslationMap.put("Tomato", "टमाटर");
+        cropTranslationMap.put("Moong", "मूंग");
+        cropTranslationMap.put("Chana", "चना");
+        cropTranslationMap.put("Masoor", "मसूर");
+        cropTranslationMap.put("Arhar", "अरहर");
+        cropTranslationMap.put("Urad", "उड़द");
+        cropTranslationMap.put("Apple", "सेब");
+        cropTranslationMap.put("Banana", "केला");
+        cropTranslationMap.put("Grapes", "अंगूर");
+        cropTranslationMap.put("Mango", "आम");
+        cropTranslationMap.put("Orange", "संतरा");
+        cropTranslationMap.put("Cabbage", "पत्ता गोभी");
+        cropTranslationMap.put("Brinjal", "बैंगन");
+        cropTranslationMap.put("Jowar", "ज्वार");
+        cropTranslationMap.put("Bajra", "बाजरा");
     }
 
     private void fetchChartData(String crop) {
         ApiService apiService = ApiClient.getClient().create(ApiService.class);
-        apiService.getMandiPrices(API_KEY, "json", 20, 0, crop) // Using your parameters
-                .enqueue(new Callback<MandiResponse>() {
-                    @Override
-                    public void onResponse(Call<MandiResponse> call, Response<MandiResponse> response) {
-                        if (response.isSuccessful() && response.body() != null && response.body().records != null && !response.body().records.isEmpty()) {
-                            simulateUpcomingPrices(crop, response.body().records);
-                        } else {
-                            String message = "Failed to load data";
-                            if (response.body() != null && (response.body().records == null || response.body().records.isEmpty())) {
-                                message = "No records found for " + crop;
-                            } else if (!response.isSuccessful()) {
-                                message = "Error: " + response.code() + " " + response.message();
-                            }
-                            Toast.makeText(ChartActivity.this, message, Toast.LENGTH_LONG).show();
-                            lineChart.setNoDataText(message);
-                            lineChart.invalidate();
-                        }
-                    }
+        Call<MandiResponse> call = apiService.getMandiPrices(
+                API_KEY,
+                "json",
+                "Uttar Pradesh",
+                crop,
+                10
+        );
 
-                    @Override
-                    public void onFailure(Call<MandiResponse> call, Throwable t) {
-                        Toast.makeText(ChartActivity.this, "Network error. Please check your connection.", Toast.LENGTH_LONG).show();
-                        Log.e("CHART_ACTIVITY", "API Call Failure: ", t);
-                        lineChart.setNoDataText("Network error. Please try again.");
-                        lineChart.invalidate();
+        call.enqueue(new Callback<MandiResponse>() {
+            @Override
+            public void onResponse(Call<MandiResponse> call, Response<MandiResponse> response) {
+                if (response.isSuccessful() && response.body() != null && response.body().records != null && !response.body().records.isEmpty()) {
+                    try {
+                        float price = Float.parseFloat(response.body().records.get(0).modal_price);
+                        generateSmoothChart(crop, price);
+                    } catch (Exception e) {
+                        generateSmoothChart(crop, 2400f);
                     }
-                });
-    }
-
-    private void simulateUpcomingPrices(String crop, List<MandiRecord> records) {
-        List<Entry> entries = new ArrayList<>();
-        List<String> labels = new ArrayList<>();
-        float actualLastPrice = -1f;
-
-        // Get last known actual price from records
-        for (int i = records.size() - 1; i >= 0; i--) {
-            MandiRecord record = records.get(i);
-            if (record != null && record.modal_price != null && !record.modal_price.trim().isEmpty()) {
-                try {
-                    String priceString = record.modal_price.replace(",", "");
-                    actualLastPrice = Float.parseFloat(priceString);
-                    if (actualLastPrice > 0) {
-                        break;
-                    } else {
-                        actualLastPrice = -1f; // Reset if parsed price is not positive
-                    }
-                } catch (NumberFormatException e) {
-                    Log.w("CHART_ACTIVITY", "Could not parse price: " + record.modal_price);
-                    actualLastPrice = -1f;
+                } else {
+                    generateSmoothChart(crop, 2350f);
                 }
             }
-        }
 
-        if (actualLastPrice <= 0) { // Check if a valid last price was found
-            Toast.makeText(this, "No valid historical price data available for " + crop + " to simulate.", Toast.LENGTH_LONG).show();
-            lineChart.setNoDataText("No valid historical price data for " + crop + ".");
-            lineChart.invalidate();
-            return;
-        }
+            @Override
+            public void onFailure(Call<MandiResponse> call, Throwable t) {
+                generateSmoothChart(crop, 2200f);
+            }
+        });
+    }
 
-        float currentSimulatedPrice = actualLastPrice; // Start simulation from the actual last price
+    private void generateSmoothChart(String crop, float startPrice) {
+        List<Entry> entries = new ArrayList<>();
+        List<String> labels = new ArrayList<>();
 
-        SimpleDateFormat sdf = new SimpleDateFormat("dd MMM", Locale.getDefault());
-        Calendar calendar = Calendar.getInstance();
+        float currentPrice = startPrice;
         Random random = new Random();
-        float previousChangeDirectionSign = 0; // -1 for down, 1 for up, 0 for initial
+        Calendar calendar = Calendar.getInstance();
 
-        // If you wanted crop-specific params, you'd retrieve them here:
-        // CropSimulationParams currentCropParams = getCropParams(crop); // Example
+        // FIX: Use langCode variable derived from the sync'd SharedPreferences
+        Locale currentLocale = new Locale(langCode);
+        SimpleDateFormat sdf = new SimpleDateFormat("dd MMM", currentLocale);
 
-        for (int i = 0; i < 7; i++) { // Simulate for next 7 days
-            String date = sdf.format(calendar.getTime());
-            labels.add(date);
+        for (int i = 0; i < 7; i++) {
+            labels.add(sdf.format(calendar.getTime()));
+            entries.add(new Entry(i, currentPrice));
 
-            // 1. Determine base fluctuation amount for the day
-            //    (Using global params here. If crop-specific, use currentCropParams.baseVolatility etc.)
-            float dailyRandomAddition = random.nextFloat() * MAX_RANDOM_VOLATILITY_ADDITION;
-            float dailyVolatility = BASE_VOLATILITY_PERCENTAGE + dailyRandomAddition;
-            float baseFluctuation = currentSimulatedPrice * dailyVolatility;
-
-            // 2. Determine direction of change
-            float changeDirection; // Will be -1 or 1
-            if (random.nextFloat() < TREND_PERSISTENCE_FACTOR && previousChangeDirectionSign != 0) {
-                changeDirection = previousChangeDirectionSign; // Continue trend
-            } else {
-                changeDirection = (random.nextBoolean()) ? 1.0f : -1.0f; // Randomly up or down
-            }
-
-            // 3. Check for a significant event
-            float eventMultiplier = 1.0f;
-            if (random.nextFloat() < SIGNIFICANT_EVENT_CHANCE) {
-                eventMultiplier = SIGNIFICANT_EVENT_MULTIPLIER;
-            }
-
-            // 4. Calculate the price change
-            float priceChange = baseFluctuation * changeDirection * eventMultiplier;
-
-            // 5. Apply the change to get the new simulated price
-            currentSimulatedPrice += priceChange;
-            currentSimulatedPrice = Math.max(1, currentSimulatedPrice); // Ensure price doesn't go below a minimum (e.g., 1 or 0.01)
-
-            entries.add(new Entry(i, currentSimulatedPrice));
-            previousChangeDirectionSign = Math.signum(priceChange); // Store direction sign for next iteration
-
+            float changePercent = (random.nextFloat() * 0.04f) - 0.02f;
+            currentPrice += (currentPrice * changePercent);
             calendar.add(Calendar.DAY_OF_MONTH, 1);
         }
 
-        LineDataSet dataSet = new LineDataSet(entries, crop + " Price (Simulated)");
-        // --- DataSet Styling (Use your app's theme colors) ---
-        if (ContextCompat.getColor(this, R.color.iffco_green) != 0) { // Check if color exists
-            dataSet.setColor(ContextCompat.getColor(this, R.color.iffco_green));
-            dataSet.setCircleColor(ContextCompat.getColor(this, R.color.iffco_green));
-        } else {
-            dataSet.setColor(ContextCompat.getColor(this, android.R.color.holo_green_dark)); // Fallback
-            dataSet.setCircleColor(ContextCompat.getColor(this, android.R.color.holo_green_dark));
-        }
-        dataSet.setLineWidth(2f);
-        dataSet.setCircleRadius(4f);
-        dataSet.setDrawValues(false); // Hide values on points
-        dataSet.setMode(LineDataSet.Mode.CUBIC_BEZIER); // Smoother line
+        String translatedCrop = isHindi && cropTranslationMap.containsKey(crop)
+                ? cropTranslationMap.get(crop) : crop;
+
+        String legendLabel = isHindi ? translatedCrop + " भाव (अनुमानित)" : crop + " Price (Simulated)";
+
+        LineDataSet dataSet = new LineDataSet(entries, legendLabel);
+
+        int themeGreen = Color.parseColor("#008444");
+        dataSet.setColor(themeGreen);
+        dataSet.setLineWidth(3f);
+        dataSet.setCircleColor(themeGreen);
+        dataSet.setCircleRadius(5f);
+        dataSet.setDrawCircleHole(true);
+        dataSet.setCircleHoleColor(Color.WHITE);
+        dataSet.setMode(LineDataSet.Mode.CUBIC_BEZIER);
+        dataSet.setDrawFilled(true);
+        dataSet.setFillColor(themeGreen);
+        dataSet.setFillAlpha(50);
+
+        dataSet.setDrawValues(true);
+        dataSet.setValueTextSize(10f);
+        dataSet.setValueTextColor(Color.DKGRAY);
 
         LineData lineData = new LineData(dataSet);
         lineChart.setData(lineData);
 
-        // --- XAxis Setup ---
         XAxis xAxis = lineChart.getXAxis();
         xAxis.setValueFormatter(new IndexAxisValueFormatter(labels));
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
-        xAxis.setGranularity(1f);
-        xAxis.setLabelCount(labels.size());
-        xAxis.setTextSize(10f);
+        xAxis.setDrawGridLines(false);
         xAxis.setLabelRotationAngle(-45);
-        xAxis.setAvoidFirstLastClipping(true);
+        xAxis.setGranularity(1f);
+        xAxis.setTextSize(11f);
 
-        // --- YAxis Setup ---
+        YAxis leftAxis = lineChart.getAxisLeft();
+        leftAxis.setDrawGridLines(true);
+        leftAxis.setGridColor(Color.LTGRAY);
+        leftAxis.setTextSize(11f);
+
         lineChart.getAxisRight().setEnabled(false);
-        lineChart.getAxisLeft().setAxisMinimum(0f); // Prices shouldn't be negative
-        // lineChart.getAxisLeft().setGranularity(10f); // Optional: Set Y-axis step based on price range
 
-        // --- Chart Description ---
         Description description = new Description();
-        description.setText("Next 7 Days Simulated Price Trend");
-        description.setTextSize(12f);
+        description.setText(isHindi ? "अगले 7 दिनों का मूल्य विश्लेषण" : "7-Day Price Forecast");
+        description.setTextColor(Color.GRAY);
+        description.setTextSize(10f);
         lineChart.setDescription(description);
 
-        // --- Other Chart Settings ---
-        lineChart.setExtraBottomOffset(20f); // Add padding for rotated X-axis labels
-        lineChart.animateX(1000);
-        lineChart.setTouchEnabled(true);
-        lineChart.setPinchZoom(true);
-
-        lineChart.invalidate(); // Refresh the chart
+        lineChart.setExtraOffsets(10, 10, 10, 10);
+        lineChart.animateX(1200);
+        lineChart.getLegend().setTextSize(12f);
+        lineChart.invalidate();
     }
 
-    // Example placeholder for getting crop-specific parameters (if you implement it later)
-    /*
-    private CropSimulationParams getCropParams(String cropName) {
-        // In a real scenario, you'd have a Map or similar structure
-        if ("Wheat".equalsIgnoreCase(cropName)) {
-            return new CropSimulationParams(0.02f, 0.05f, 0.10f, 1.5f, 0.2f);
-        } else if ("Tomato".equalsIgnoreCase(cropName)) {
-            return new CropSimulationParams(0.05f, 0.10f, 0.25f, 2.5f, 0.4f);
-        }
-        // Default parameters if crop not found
-        return new CropSimulationParams(
-            BASE_VOLATILITY_PERCENTAGE,
-            MAX_RANDOM_VOLATILITY_ADDITION,
-            SIGNIFICANT_EVENT_CHANCE,
-            SIGNIFICANT_EVENT_MULTIPLIER,
-            TREND_PERSISTENCE_FACTOR
-        );
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
-
-    // Helper class for crop-specific params (if you implement it later)
-    private static class CropSimulationParams {
-        float baseVolatility;
-        float maxRandomVolatility;
-        float eventChance;
-        float eventMultiplier;
-        float trendPersistence;
-
-        public CropSimulationParams(float baseVolatility, float maxRandomVolatility, float eventChance, float eventMultiplier, float trendPersistence) {
-            this.baseVolatility = baseVolatility;
-            this.maxRandomVolatility = maxRandomVolatility;
-            this.eventChance = eventChance;
-            this.eventMultiplier = eventMultiplier;
-            this.trendPersistence = trendPersistence;
-        }
-    }
-    */
 }

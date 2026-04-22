@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -41,10 +42,13 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final LinearLayout mainLayout;
 
+  @NonNull
+  public final TextView tvWelcome;
+
   private ActivityMainBinding(@NonNull ScrollView rootView, @NonNull ImageButton btnChart,
       @NonNull ImageButton btnDisease, @NonNull ImageButton btnFetchPrice,
       @NonNull ImageButton btnNews, @NonNull ImageButton btnTip, @NonNull ImageButton btnWeather,
-      @NonNull LinearLayout mainLayout) {
+      @NonNull LinearLayout mainLayout, @NonNull TextView tvWelcome) {
     this.rootView = rootView;
     this.btnChart = btnChart;
     this.btnDisease = btnDisease;
@@ -53,6 +57,7 @@ public final class ActivityMainBinding implements ViewBinding {
     this.btnTip = btnTip;
     this.btnWeather = btnWeather;
     this.mainLayout = mainLayout;
+    this.tvWelcome = tvWelcome;
   }
 
   @Override
@@ -124,8 +129,14 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvWelcome;
+      TextView tvWelcome = ViewBindings.findChildViewById(rootView, id);
+      if (tvWelcome == null) {
+        break missingId;
+      }
+
       return new ActivityMainBinding((ScrollView) rootView, btnChart, btnDisease, btnFetchPrice,
-          btnNews, btnTip, btnWeather, mainLayout);
+          btnNews, btnTip, btnWeather, mainLayout, tvWelcome);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

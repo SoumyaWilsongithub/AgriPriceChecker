@@ -88,6 +88,10 @@
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-58:\\layout\\activity_chart.xml"
     },
     {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-56:\\layout_item_mandi.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-58:\\layout\\item_mandi.xml"
+    },
+    {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-56:\\layout_crop_item.xml.flat",
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-58:\\layout\\crop_item.xml"
     },
@@ -228,6 +232,10 @@
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-58:\\mipmap-xhdpi\\farmer_foreground.webp"
     },
     {
+        "merged": "com.example.agripricechecker.app-debug-56:/layout_activity_soil_test.xml.flat",
+        "source": "com.example.agripricechecker.app-main-58:/layout/activity_soil_test.xml"
+    },
+    {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-56:\\mipmap-mdpi_ic_launcher_foreground.webp.flat",
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-58:\\mipmap-mdpi\\ic_launcher_foreground.webp"
     },
@@ -238,6 +246,10 @@
     {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-56:\\mipmap-xxhdpi_app.webp.flat",
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-58:\\mipmap-xxhdpi\\app.webp"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-56:\\layout_activity_soil_test.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-58:\\layout\\activity_soil_test.xml"
     },
     {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-56:\\mipmap-mdpi_weather_foreground.webp.flat",
@@ -272,10 +284,6 @@
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-58:\\mipmap-xxhdpi\\weather.webp"
     },
     {
-        "merged": "com.example.agripricechecker.app-debug-56:/layout_activity_crop_disease.xml.flat",
-        "source": "com.example.agripricechecker.app-main-58:/layout/activity_crop_disease.xml"
-    },
-    {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-56:\\layout_item_crop_calendar.xml.flat",
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-58:\\layout\\item_crop_calendar.xml"
     },
@@ -304,12 +312,12 @@
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-58:\\layout\\activity_crop_detail.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-56:\\mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-58:\\mipmap-xxhdpi\\ic_launcher_foreground.webp"
-    },
-    {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-56:\\layout_activity_splash.xml.flat",
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-58:\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-56:\\mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-main-58:\\mipmap-xxhdpi\\ic_launcher_foreground.webp"
     },
     {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.0-milestone-1\\com.example.agripricechecker.app-debug-56:\\mipmap-xhdpi_ic_launcher_foreground.webp.flat",

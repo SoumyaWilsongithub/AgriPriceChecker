@@ -42,7 +42,7 @@
         android:debuggable="true"
         android:extractNativeLibs="false"
         android:icon="@mipmap/app"
-        android:label="Agri Price Checker"
+        android:label="Kisan Sathi"
         android:roundIcon="@mipmap/app"
         android:testOnly="true"
         android:theme="@style/Theme.AgriPriceChecker"
@@ -73,6 +73,7 @@
         <activity android:name="com.example.agripricechecker.FetchPriceActivity" />
         <activity android:name="com.example.agripricechecker.ChartCropSelectionActivity" />
         <activity android:name="com.example.agripricechecker.ChartActivity" />
+        <activity android:name="com.example.agripricechecker.SoilTestActivity" />
         <activity android:name="com.example.agripricechecker.CropCalendarActivity" />
         <activity android:name="com.example.agripricechecker.CropDetailActivity" />
         <activity android:name="com.example.agripricechecker.FertilizerActivity" />

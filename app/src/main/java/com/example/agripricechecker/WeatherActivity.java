@@ -1,10 +1,11 @@
-package com.example.agripricechecker; // Make sure this matches your package name
+package com.example.agripricechecker;
 
 import android.Manifest;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.location.Location;
+import android.graphics.Typeface;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -19,9 +20,10 @@ import androidx.core.content.ContextCompat;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.tasks.OnSuccessListener;
 
 import java.util.List;
+import java.util.Locale;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -30,261 +32,179 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class WeatherActivity extends AppCompatActivity {
 
-    TextView tvCity, tvTemp, tvHumidity, tvWind, tvDescription, tvSuggestion;
-    LinearLayout forecastLayout;
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
 
-    // API Details
+    @Override
+    public boolean onOptionsItemSelected(@NonNull android.view.MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private TextView tvCity, tvTemp, tvHumidity, tvWind, tvDescription, tvSuggestion;
+    private ImageView ivWeatherIcon;
+    private LinearLayout forecastLayout;
+    private FusedLocationProviderClient fusedLocationClient;
+
     private final String BASE_URL = "https://api.weatherapi.com/";
     private final String API_KEY = "34d6bbcc55414b30a8f134632250407";
 
-    // Location Variables
-    private FusedLocationProviderClient fusedLocationClient;
-    private static final int LOCATION_PERMISSION_REQUEST_CODE = 1001;
-    private final String DEFAULT_CITY_QUERY = "New Delhi, India";
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(LocaleHelper.onAttach(newBase));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
 
-        // UI Initialization
+        // ✅ Toolbar setup (Title + Back Arrow)
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle(getString(R.string.title_weather));
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeButtonEnabled(true);
+        }
+
         tvCity = findViewById(R.id.tvCity);
         tvTemp = findViewById(R.id.tvTemp);
         tvHumidity = findViewById(R.id.tvHumidity);
         tvWind = findViewById(R.id.tvWind);
         tvDescription = findViewById(R.id.tvDescription);
         tvSuggestion = findViewById(R.id.tvSuggestion);
+        ivWeatherIcon = findViewById(R.id.ivWeatherIcon);
         forecastLayout = findViewById(R.id.forecastLayout);
 
-        // Location Setup
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
-        checkLocationPermission();
+        checkPermissionsAndFetch();
     }
 
-    // --- LOCATION METHODS ---
-
-    private void checkLocationPermission() {
+    private void checkPermissionsAndFetch() {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                    LOCATION_PERMISSION_REQUEST_CODE);
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1001);
         } else {
-            getLocation();
+            fetchLocation();
         }
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == LOCATION_PERMISSION_REQUEST_CODE) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                getLocation();
-            } else {
-                Toast.makeText(this, "Location permission denied. Showing weather for " + DEFAULT_CITY_QUERY, Toast.LENGTH_LONG).show();
-                fetchWeather(DEFAULT_CITY_QUERY);
-            }
-        }
-    }
-
-    private void getLocation() {
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
-                ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            return; // Should not happen if permission flow is followed
-        }
-
-        fusedLocationClient.getLastLocation().addOnSuccessListener(this, new OnSuccessListener<Location>() {
-            @Override
-            public void onSuccess(Location location) {
-                if (location != null) {
-                    String coordinates = location.getLatitude() + "," + location.getLongitude();
-                    Log.d("WeatherApp", "Fetching weather for coords: " + coordinates);
-                    fetchWeather(coordinates);
-                } else {
-                    Toast.makeText(WeatherActivity.this, "Could not get current location. Showing weather for " + DEFAULT_CITY_QUERY, Toast.LENGTH_LONG).show();
-                    fetchWeather(DEFAULT_CITY_QUERY);
-                }
-            }
+    private void fetchLocation() {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)
+            return;
+        fusedLocationClient.getLastLocation().addOnSuccessListener(this, location -> {
+            String query = (location != null) ? (location.getLatitude() + "," + location.getLongitude()) : "New Delhi";
+            callWeatherApi(query);
         });
     }
 
-    // --- API FETCH METHODS ---
+    private void callWeatherApi(String query) {
+        SharedPreferences prefs = getSharedPreferences("AgriPrice_Prefs", MODE_PRIVATE);
+        String savedLang = prefs.getString("Locale.Helper.Selected.Language", "en").toLowerCase();
+        String currentResLang = getResources().getConfiguration().locale.getLanguage();
 
-    private void fetchWeather(String locationQuery) {
-        fetchCurrentWeather(locationQuery);
-        fetchForecast(locationQuery);
-    }
+        final boolean isHindi = savedLang.contains("hi") || currentResLang.contains("hi");
+        final String apiLang = isHindi ? "hi" : "en";
 
-    private void fetchCurrentWeather(String locationQuery) {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
         WeatherAPI api = retrofit.create(WeatherAPI.class);
-        Call<WeatherResponse> call = api.getCurrentWeather(locationQuery, API_KEY);
 
-        call.enqueue(new Callback<WeatherResponse>() {
+        api.getForecast(API_KEY, query, 3, "no", "no", apiLang).enqueue(new Callback<WeatherAPI.WeatherResponse>() {
             @Override
-            public void onResponse(@NonNull Call<WeatherResponse> call, @NonNull Response<WeatherResponse> response) {
-                if (isFinishing() || isDestroyed()) return;
-
+            public void onResponse(@NonNull Call<WeatherAPI.WeatherResponse> call, @NonNull Response<WeatherAPI.WeatherResponse> response) {
                 if (response.isSuccessful() && response.body() != null) {
-                    WeatherResponse data = response.body();
-
-                    // 🛑 INDIA FILTER AND NULL CHECK 🛑
-                    boolean isIndia = data.location != null && "India".equalsIgnoreCase(data.location.country);
-
-                    if (isIndia) {
-                        // Location is in India, proceed to display data
-                        if (data.location != null) {
-                            tvCity.setText(data.location.name + ", " + data.location.region);
-                        }
-
-                        if (data.current != null) {
-                            tvTemp.setText(data.current.tempC + "°C");
-                            tvHumidity.setText("Humidity: " + data.current.humidity + "%");
-                            tvWind.setText("Wind: " + data.current.windKph + " km/h");
-
-                            if (data.current.condition != null) {
-                                String conditionText = data.current.condition.text;
-                                tvDescription.setText(conditionText);
-                                tvSuggestion.setText(getSuggestion(conditionText));
-
-                            }
-                        }
-                    } else {
-                        // Location is NOT in India
-                        tvCity.setText("Location not in India. Using fallback.");
-                        Toast.makeText(WeatherActivity.this, "Location detected outside India. Using fallback: " + DEFAULT_CITY_QUERY, Toast.LENGTH_LONG).show();
-                        fetchWeather(DEFAULT_CITY_QUERY);
-                    }
-                } else {
-                    Toast.makeText(WeatherActivity.this, "Weather data failed: " + response.code(), Toast.LENGTH_SHORT).show();
+                    updateUI(response.body(), isHindi);
                 }
             }
 
             @Override
-            public void onFailure(@NonNull Call<WeatherResponse> call, @NonNull Throwable t) {
-                if (!isFinishing() && !isDestroyed()) {
-                    Toast.makeText(WeatherActivity.this, "Network Error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
-                }
+            public void onFailure(@NonNull Call<WeatherAPI.WeatherResponse> call, @NonNull Throwable t) {
+                Toast.makeText(WeatherActivity.this, isHindi ? "नेटवर्क त्रुटि" : "Network Error", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
-    private void fetchForecast(String locationQuery) {
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-
-        WeatherAPI api = retrofit.create(WeatherAPI.class);
-        Call<ForecastResponse> call = api.getForecast(locationQuery, API_KEY, 5); // Requesting 5 days
-
-        call.enqueue(new Callback<ForecastResponse>() {
-            @Override
-            public void onResponse(@NonNull Call<ForecastResponse> call, @NonNull Response<ForecastResponse> response) {
-                if (isFinishing() || isDestroyed()) return;
-
-                if (response.isSuccessful() && response.body() != null) {
-                    ForecastResponse body = response.body();
-                    if (body.forecast != null && body.forecast.forecastday != null) {
-                        displayForecast(body.forecast.forecastday);
-                    }
-                }
-            }
-
-            @Override
-            public void onFailure(@NonNull Call<ForecastResponse> call, @NonNull Throwable t) {
-                Log.e("WeatherApp", "Forecast network error: " + t.getMessage());
-            }
-        });
+    // Helper method to convert common city names to Hindi
+    private String getHindiCityName(String englishName) {
+        if (englishName == null) return "";
+        switch (englishName.toLowerCase().trim()) {
+            case "bareilly": return "बरेली";
+            case "new delhi": return "नई दिल्ली";
+            case "lucknow": return "लखनऊ";
+            case "mumbai": return "मुंबई";
+            case "moradabad": return "मुरादाबाद";
+            case "agra": return "आगरा";
+            case "kanpur": return "कानपुर";
+            default: return englishName; // Fallback to original if not in list
+        }
     }
 
-    // --- UTILITY METHODS ---
+    private void updateUI(WeatherAPI.WeatherResponse data, boolean isHindi) {
+        // Apply city translation if in Hindi mode
+        String cityName = isHindi ? getHindiCityName(data.location.name) : data.location.name;
+        tvCity.setText(cityName);
 
-    private void displayForecast(List<ForecastResponse.ForecastDay> list) {
+        tvTemp.setText((int) data.current.temp_c + "°C");
+
+        if (isHindi) {
+            tvHumidity.setText("नमी: " + data.current.humidity + "%");
+            tvWind.setText("हवा: " + data.current.wind_kph + " किमी/घंटा");
+            tvDescription.setText(data.current.condition.text);
+        } else {
+            tvHumidity.setText("Humidity: " + data.current.humidity + "%");
+            tvWind.setText("Wind: " + data.current.wind_kph + " km/h");
+            tvDescription.setText(data.current.condition.text);
+        }
+
+        tvSuggestion.setText(generateSuggestion(data.current.condition.text, isHindi));
+        Glide.with(this).load("https:" + data.current.condition.icon).into(ivWeatherIcon);
+
         forecastLayout.removeAllViews();
+        List<WeatherAPI.WeatherResponse.ForecastDay> days = data.forecast.forecastday;
 
-        if (list == null || list.size() < 2) return; // Need at least today and tomorrow
+        TextView header = new TextView(this);
+        header.setText(isHindi ? "2-दिन का पूर्वानुमान" : "2-Day Forecast");
+        header.setTextSize(18);
+        header.setTypeface(null, Typeface.BOLD);
+        header.setTextColor(ContextCompat.getColor(this, android.R.color.black));
+        header.setPadding(0, 30, 0, 15);
+        header.setGravity(Gravity.CENTER_HORIZONTAL);
+        forecastLayout.addView(header);
 
-        // 🛑 FIX: Start the loop from the second element (index 1) to skip today's forecast.
-        for (int i = 1; i < list.size(); i++) {
-            ForecastResponse.ForecastDay item = list.get(i);
+        for (int i = 1; i < days.size(); i++) {
+            TextView tv = new TextView(this);
+            tv.setPadding(0, 15, 0, 15);
+            tv.setTextSize(16);
+            tv.setTextColor(ContextCompat.getColor(this, android.R.color.black));
 
-            if (item == null || item.day == null || item.day.condition == null) continue;
-
-            LinearLayout row = new LinearLayout(this);
-            row.setOrientation(LinearLayout.HORIZONTAL);
-            row.setPadding(8, 16, 8, 16);
-            row.setGravity(Gravity.CENTER_VERTICAL);
-
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT
-            );
-            row.setLayoutParams(params);
-
-            // Date TextView
-            TextView tvDate = new TextView(this);
-            tvDate.setText(item.date);
-            tvDate.setTextSize(14);
-            tvDate.setPadding(0,0,20,0);
-            LinearLayout.LayoutParams dateParams = new LinearLayout.LayoutParams(
-                    0, LinearLayout.LayoutParams.WRAP_CONTENT, 2f);
-            tvDate.setLayoutParams(dateParams);
-
-            // Icon ImageView
-            ImageView ivIcon = new ImageView(this);
-            String iconUrl = "https:" + item.day.condition.icon;
-            try {
-                Glide.with(this).load(iconUrl).into(ivIcon);
-            } catch (Exception e) {
-                // Image loading failed gracefully
-            }
-            LinearLayout.LayoutParams iconParams = new LinearLayout.LayoutParams(
-                    0, 100, 1f);
-            ivIcon.setLayoutParams(iconParams);
-
-
-            // Temp TextView
-            TextView tvTemp = new TextView(this);
-            tvTemp.setText(item.day.avgTempC + "°C");
-            tvTemp.setTextSize(16);
-            tvTemp.setGravity(Gravity.END);
-            LinearLayout.LayoutParams tempParams = new LinearLayout.LayoutParams(
-                    0, LinearLayout.LayoutParams.WRAP_CONTENT, 1.5f);
-            tvTemp.setLayoutParams(tempParams);
-
-            // Description TextView
-            TextView tvDesc = new TextView(this);
-            tvDesc.setText(item.day.condition.text);
-            tvDesc.setTextSize(12);
-            tvDesc.setPadding(20, 0, 0, 0);
-            LinearLayout.LayoutParams descParams = new LinearLayout.LayoutParams(
-                    0, LinearLayout.LayoutParams.WRAP_CONTENT, 2.5f);
-            tvDesc.setLayoutParams(descParams);
-
-
-            row.addView(tvDate);
-            row.addView(ivIcon);
-            row.addView(tvTemp);
-            row.addView(tvDesc);
-
-            forecastLayout.addView(row);
+            String dateLabel = isHindi ? "तारीख: " : "Date: ";
+            tv.setText(dateLabel + days.get(i).date + " | " + (int) days.get(i).day.avgtemp_c + "°C | " + days.get(i).day.condition.text);
+            forecastLayout.addView(tv);
         }
     }
 
-    private String getSuggestion(String desc) {
-        if (desc == null) return "Suggestion: Check local news for agricultural advisories.";
-        desc = desc.toLowerCase();
+    private String generateSuggestion(String desc, boolean isHindi) {
+        if (desc == null) return "";
+        String low = desc.toLowerCase();
 
-        if (desc.contains("rain") || desc.contains("drizzle")) return "Suggestion: Avoid field work and protect crops from water damage.";
-        if (desc.contains("storm") || desc.contains("thunder")) return "Suggestion: Secure outdoor materials immediately.";
-        if (desc.contains("clear") || desc.contains("sunny")) return "Suggestion: Excellent weather for irrigation or harvesting.";
-        if (desc.contains("cloudy") || desc.contains("overcast")) return "Suggestion: Suitable for light fieldwork.";
-        if (desc.contains("mist") || desc.contains("fog")) return "Suggestion: Visibility is low, postpone road transport.";
-
-        return "Suggestion: Check local news for agricultural advisories.";
+        if (isHindi) {
+            if (low.contains("rain") || low.contains("mist") || low.contains("बारिश") || low.contains("धुंध"))
+                return "सुझाव: नमी या बारिश की संभावना। सिंचाई रोक दें।";
+            if (low.contains("sun") || low.contains("clear") || low.contains("साफ") || low.contains("धूप"))
+                return "सुझाव: मौसम साफ है। खाद डालने के लिए अच्छा समय।";
+            return "सुझाव: कृषि कार्य जारी रखें।";
+        } else {
+            if (low.contains("rain") || low.contains("mist"))
+                return "Suggestion: Possible rain/mist. Stop irrigation.";
+            return "Suggestion: Clear sky. Good for farm activities.";
+        }
     }
 }

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">किसान साथी</string>
+    <string name="welcome">आपका स्वागत है</string>
+
+    <!-- Main Menu -->
+    <string name="fetch_price">भाव पता करें</string>
+    <string name="price_trend">बाजार रुझान</string>
+    <string name="crop_calendar">फसल कैलेंडर</string>
+    <string name="fert_rec">उर्वरक सलाह</string>
+    <string name="weather">मौसम पूर्वानुमान</string>
+    <string name="disease">रोग की पहचान</string>
+
+    <!-- Language -->
+    <string name="choose_language">भाषा चुनें</string>
+
+    <!-- Crop Categories -->
+    <string name="all">सभी</string>
+    <string name="grain">अनाज</string>
+    <string name="pulse">दाल</string>
+    <string name="vegetable">सब्ज़ी</string>
+    <string name="fruit">फल</string>
+
+    <!-- Mandi Labels -->
+    <string name="market_label">मंडी</string>
+    <string name="date_label">तारीख</string>
+    <string name="price_label">कीमत</string>
+    <string name="quintal">क्विंटल</string>
+
+    <!-- Fetch Price -->
+    <string name="check_crop_price">फसल मूल्य देखें</string>
+    <string name="select_crop_type">फसल प्रकार चुनें</string>
+    <string name="select_crop">फसल चुनें</string>
+    <string name="select_crop_prompt">फसल चुनें:</string>
+    <string name="enter_crop_name">फसल का नाम दर्ज करें</string>
+    <string name="enter_crop_name_error">कृपया पहले एक फसल चुनें</string>
+
+    <string name="enter_crop_error">फसल का नाम दर्ज करें</string>
+    <string name="no_price_data">मूल्य डेटा उपलब्ध नहीं है</string>
+    <string name="no_up_mandi">उत्तर प्रदेश मंडी डेटा नहीं मिला</string>
+
+    <string name="soil_test_title">मिट्टी परीक्षण</string>
+
+
+
+    <!-- Chart -->
+    <string name="price_chart_title">%1$s मूल्य चार्ट</string>
+    <string name="simulated_trend_label">अगले 7 दिनों का अनुमानित मूल्य रुझान</string>
+
+    <!-- Crop Names -->
+    <string name="crop_rice">धान</string>
+    <string name="crop_wheat">गेहूँ</string>
+    <string name="crop_maize">मक्का</string>
+    <string name="crop_potato">आलू</string>
+    <string name="crop_onion">प्याज</string>
+    <string name="crop_tomato">टमाटर</string>
+
+    <string name="image_to_classify">फसल रोग पहचान के लिए छवि</string>
+
+    <string name="select_soil">मिट्टी का प्रकार चुनें</string>
+    <string name="check_soil">मिट्टी जांचें</string>
+    <string name="result">परिणाम</string>
+    <string name="title_main">होम</string>
+
+    <string name="title_fetch">भाव पता करें</string>
+    <string name="title_weather">मौसम</string>
+
+    <!-- Authentication -->
+    <string name="logout">लॉगआउट</string>
+    <string name="logout_title">लॉगआउट</string>
+    <string name="logout_message">क्या आप वाकई लॉगआउट करना चाहते हैं?</string>
+    <string name="yes">हाँ</string>
+    <string name="no">नहीं</string>
+    <string name="logged_out">सफलतापूर्वक लॉगआउट किया गया</string>
+    <string name="logged_out_toast">लॉगआउट हो गया</string>
+
+    <!-- Errors -->
+    <string name="no_data_found">कोई डेटा नहीं मिला</string>
+    <string name="network_error">नेटवर्क त्रुटि हुई</string>
+
+</resources>

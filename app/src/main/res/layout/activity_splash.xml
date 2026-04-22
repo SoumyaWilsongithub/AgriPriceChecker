@@ -7,19 +7,32 @@
     android:background="@color/iffco_white"
     android:padding="24dp">
 
+    <!-- App Logo -->
     <ImageView
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:src="@mipmap/app"
-        android:contentDescription="App Logo"
-        android:layout_gravity="center" />
+        android:contentDescription="App Logo" />
 
+    <!-- English Name -->
     <TextView
+        android:id="@+id/appNameEnglish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Agri Price Checker"
-        android:textColor="@color/iffco_green"
-        android:textSize="24sp"
+        android:text="Kisan Sathi"
+        android:textColor="@color/iffco_green_light"
+        android:textSize="26sp"
         android:textStyle="bold"
         android:layout_marginTop="16dp" />
+
+    <!-- Hindi Name -->
+    <TextView
+        android:id="@+id/appNameHindi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="किसान साथी"
+        android:textColor="@color/iffco_green_light"
+        android:textSize="18sp"
+        android:layout_marginTop="4dp" />
+
 </LinearLayout>

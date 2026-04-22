@@ -4,7 +4,7 @@
             "outputFile": "com.example.agripricechecker.app-mergeDebugResources-54:/values-v26/values-v26.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Dell\\.gradle\\caches\\9.0-milestone-1\\transforms\\ebfbc78f35ce6fd9eca544f3ab310d43\\transformed\\appcompat-1.6.1\\res\\values-v26\\values-v26.xml",
+                    "source": "C:\\Users\\Dell\\.gradle\\caches\\9.0-milestone-1\\transforms\\8c48615b776b7d512a58620803b08937\\transformed\\appcompat-1.6.1\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",

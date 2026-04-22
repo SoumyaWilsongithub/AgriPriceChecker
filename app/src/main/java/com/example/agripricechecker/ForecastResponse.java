@@ -3,28 +3,55 @@ package com.example.agripricechecker;
 import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
+/**
+ * This model handles the WeatherAPI Forecast response.
+ * We include all necessary sub-classes here to prevent "Symbol not found" errors.
+ */
 public class ForecastResponse {
+
+    @SerializedName("location")
+    public Location location;
+
     @SerializedName("forecast")
     public Forecast forecast;
 
-    public class Forecast {
+    public static class Location {
+        @SerializedName("name")
+        public String name;
+        @SerializedName("region")
+        public String region;
+    }
+
+    public static class Forecast {
         @SerializedName("forecastday")
         public List<ForecastDay> forecastday;
     }
 
-    public class ForecastDay {
+    public static class ForecastDay {
         @SerializedName("date")
         public String date;
-
         @SerializedName("day")
         public Day day;
     }
 
-    public class Day {
+    public static class Day {
         @SerializedName("avgtemp_c")
-        public float avgTempC;
+        public double avgtemp_c;
 
         @SerializedName("condition")
-        public WeatherResponse.Condition condition; // Reusing Condition from WeatherResponse
+        public Condition condition;
+
+        @SerializedName("avghumidity")
+        public double avghumidity;
+
+        @SerializedName("maxwind_kph")
+        public double maxwind_kph;
+    }
+
+    public static class Condition {
+        @SerializedName("text")
+        public String text;
+        @SerializedName("icon")
+        public String icon;
     }
 }
